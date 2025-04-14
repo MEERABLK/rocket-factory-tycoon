@@ -1,2 +1,2 @@
-# rocket-factory-tycoon
+# Rocket Factory Tycoon
  A C# GUI-based game application using the clicker model.
