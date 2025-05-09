@@ -8,3 +8,13 @@ C:\Users\2388387\Downloads\RocketClickerGame\RocketClickerGame\RocketClickerGame
 C:\Users\2388387\Downloads\RocketClickerGame\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.CoreCompileInputs.cache
 C:\Users\2388387\Downloads\RocketClickerGame\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
 C:\Users\2388387\Downloads\RocketClickerGame\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\RocketClickerGame.exe.config
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\RocketClickerGame.exe
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\RocketClickerGame.pdb
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.AssemblyReference.cache
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.RocketClickerGameForm.resources
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.Properties.Resources.resources
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.GenerateResource.cache
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.CoreCompileInputs.cache
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb
