@@ -32,6 +32,8 @@ namespace RocketClickerGame
 
         private int flameFrame = 0;
 
+        private int points = 0;
+
 
         public RocketClickerGameForm()
         {
@@ -75,8 +77,18 @@ namespace RocketClickerGame
             // displays as int number of clicks
             clicksLabel.Text = "Clicks: " + clicks;
 
+
             //the number of clicks increment at each click
             clicks++;
+
+            //to change based on upgrades
+            int pointsPerClick = 1;
+
+            points += pointsPerClick;
+
+            pointsLabel.Text = "Points: " + points;
+
+
         }
 
         //the time
@@ -168,6 +180,8 @@ namespace RocketClickerGame
             //modulo 14 because of 0-13 cases and frames
 
             flameFrame = (flameFrame + 1) % 14;
+            //enum class to flip clockwise with part of system drawing namespace
+            //Rotate180FlipNone is its field 
             RotateFlipType rotateAngle = RotateFlipType.Rotate180FlipNone;
 
             switch (flameFrame)

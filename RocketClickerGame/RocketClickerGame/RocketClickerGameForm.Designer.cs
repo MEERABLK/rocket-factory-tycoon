@@ -39,6 +39,7 @@
             this.playButtonTimer = new System.Windows.Forms.Timer(this.components);
             this.firePictureBox = new System.Windows.Forms.PictureBox();
             this.flameTimer = new System.Windows.Forms.Timer(this.components);
+            this.pointsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.firePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,6 +160,18 @@
             // 
             this.flameTimer.Tick += new System.EventHandler(this.flameTimer_Tick);
             // 
+            // pointsLabel
+            // 
+            this.pointsLabel.AutoSize = true;
+            this.pointsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.pointsLabel.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pointsLabel.ForeColor = System.Drawing.Color.White;
+            this.pointsLabel.Location = new System.Drawing.Point(470, 12);
+            this.pointsLabel.Name = "pointsLabel";
+            this.pointsLabel.Size = new System.Drawing.Size(133, 42);
+            this.pointsLabel.TabIndex = 7;
+            this.pointsLabel.Text = "Points: 0";
+            // 
             // RocketClickerGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,6 +179,7 @@
             this.BackgroundImage = global::RocketClickerGame.Properties.Resources.centaurbridgeRender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1080, 790);
+            this.Controls.Add(this.pointsLabel);
             this.Controls.Add(this.firePictureBox);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.settingsButton);
@@ -197,6 +211,7 @@
         private System.Windows.Forms.Timer playButtonTimer;
         private System.Windows.Forms.PictureBox firePictureBox;
         private System.Windows.Forms.Timer flameTimer;
+        private System.Windows.Forms.Label pointsLabel;
     }
 }
 
