@@ -86,5 +86,8 @@
   <ItemGroup>
     <None Include="Resources\conte_magnus-cc0-Rockets.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
