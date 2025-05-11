@@ -37,6 +37,9 @@
             this.settingsButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
             this.playButtonTimer = new System.Windows.Forms.Timer(this.components);
+            this.firePictureBox = new System.Windows.Forms.PictureBox();
+            this.flameTimer = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.firePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // rocketButton1
@@ -49,7 +52,7 @@
             this.rocketButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rocketButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rocketButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rocketButton1.Location = new System.Drawing.Point(441, 128);
+            this.rocketButton1.Location = new System.Drawing.Point(433, 168);
             this.rocketButton1.Name = "rocketButton1";
             this.rocketButton1.Size = new System.Drawing.Size(225, 468);
             this.rocketButton1.TabIndex = 0;
@@ -139,13 +142,31 @@
             // 
             this.playButtonTimer.Tick += new System.EventHandler(this.playButtonTimer_Tick);
             // 
+            // firePictureBox
+            // 
+            this.firePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.firePictureBox.BackgroundImage = global::RocketClickerGame.Properties.Resources.fire1__01;
+            this.firePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.firePictureBox.Image = global::RocketClickerGame.Properties.Resources.fire1__01;
+            this.firePictureBox.Location = new System.Drawing.Point(282, 575);
+            this.firePictureBox.Name = "firePictureBox";
+            this.firePictureBox.Size = new System.Drawing.Size(516, 203);
+            this.firePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firePictureBox.TabIndex = 6;
+            this.firePictureBox.TabStop = false;
+            // 
+            // flameTimer
+            // 
+            this.flameTimer.Tick += new System.EventHandler(this.flameTimer_Tick);
+            // 
             // RocketClickerGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RocketClickerGame.Properties.Resources.centaurbridgeRender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1080, 608);
+            this.ClientSize = new System.Drawing.Size(1080, 790);
+            this.Controls.Add(this.firePictureBox);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.restartButton);
@@ -158,6 +179,7 @@
             this.Text = "Rocket Factory Tycoon";
             this.Load += new System.EventHandler(this.RocketClickerGameForm_Load);
             this.Shown += new System.EventHandler(this.RocketClickerGameForm_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.firePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,6 +195,8 @@
         private System.Windows.Forms.Button settingsButton;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Timer playButtonTimer;
+        private System.Windows.Forms.PictureBox firePictureBox;
+        private System.Windows.Forms.Timer flameTimer;
     }
 }
 

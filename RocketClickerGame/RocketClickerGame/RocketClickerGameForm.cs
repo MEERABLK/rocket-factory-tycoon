@@ -30,6 +30,9 @@ namespace RocketClickerGame
 
         SoundPlayer musicPlayer;
 
+        private int flameFrame = 0;
+
+
         public RocketClickerGameForm()
         {
             InitializeComponent();
@@ -39,10 +42,13 @@ namespace RocketClickerGame
        
             // Disable rocket button until Play is clicked
             rocketButton1.Enabled = false;
-        
-        
-        
-        
+
+
+            firePictureBox.Location = new Point(rocketButton1.Location.X-150, rocketButton1.Location.Y + rocketButton1.Height);
+
+            flameTimer.Start();
+
+
         }
 
         private void RocketClickerGameForm_Load(object sender, EventArgs e)
@@ -153,6 +159,77 @@ namespace RocketClickerGame
             else
             {
                 this.Close(); // User closed popup without starting
+            }
+        }
+
+        private void flameTimer_Tick(object sender, EventArgs e)
+        {
+           
+            //modulo 14 because of 0-13 cases and frames
+
+            flameFrame = (flameFrame + 1) % 14;
+            RotateFlipType rotateAngle = RotateFlipType.Rotate180FlipNone;
+
+            switch (flameFrame)
+            {
+                case 0:
+                    firePictureBox.Image = Properties.Resources.fire1__01;
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                case 1:
+                    firePictureBox.Image = Properties.Resources.fire1__02;
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                case 2:
+                   firePictureBox.Image = Properties.Resources.fire1__03;
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 3: 
+                    firePictureBox.Image= Properties.Resources.fire1__04;
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 4:
+                    firePictureBox.Image=(Properties.Resources.fire1__05);
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 5:
+                    firePictureBox.Image=Properties.Resources.fire1__07;
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 6:
+                    firePictureBox.Image = ((Properties.Resources.fire1__06));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 7:
+                    firePictureBox.Image=((Properties.Resources.fire1__07));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;  
+                    case 8: 
+                    firePictureBox.Image= ((Properties.Resources.fire1__08));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 9:
+                    firePictureBox.Image= ((Properties.Resources.fire1__09));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 10:
+                    firePictureBox.Image= ((Properties.Resources.fire1__10));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 11:
+                    firePictureBox.Image=((Properties.Resources.fire1__11));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 12:
+                    firePictureBox.Image=((Properties.Resources.fire1__12));
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;
+                    case 13:
+                    firePictureBox.Image=(Properties.Resources.fire1__13);
+                    firePictureBox.Image.RotateFlip(rotateAngle);
+                    break;  
+                                
+
             }
         }
     }
