@@ -33,8 +33,16 @@ namespace RocketClickerGame
         public RocketClickerGameForm()
         {
             InitializeComponent();
+
+
+           
+       
             // Disable rocket button until Play is clicked
             rocketButton1.Enabled = false;
+        
+        
+        
+        
         }
 
         private void RocketClickerGameForm_Load(object sender, EventArgs e)
@@ -130,6 +138,22 @@ namespace RocketClickerGame
 
             //instantiate the point to make the button moving
             playButton.Location = new Point(newX, playButton.Location.Y);
+        }
+
+        private void RocketClickerGameForm_Shown(object sender, EventArgs e)
+        {
+            // When the main form is already visible, show the popup in front
+            StartForm startForm = new StartForm();
+            var result = startForm.ShowDialog(this); // this = show in front of main form
+
+            if (result == DialogResult.OK)
+            {
+                rocketButton1.Enabled = false;
+            }
+            else
+            {
+                this.Close(); // User closed popup without starting
+            }
         }
     }
 }

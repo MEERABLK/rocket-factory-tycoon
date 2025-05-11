@@ -18,3 +18,4 @@ C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debu
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.CoreCompileInputs.cache
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.resources

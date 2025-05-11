@@ -157,6 +157,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rocket Factory Tycoon";
             this.Load += new System.EventHandler(this.RocketClickerGameForm_Load);
+            this.Shown += new System.EventHandler(this.RocketClickerGameForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
