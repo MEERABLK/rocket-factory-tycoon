@@ -34,6 +34,9 @@
             this.clicksLabel = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.restartButton = new System.Windows.Forms.Button();
+            this.settingsButton = new System.Windows.Forms.Button();
+            this.playButton = new System.Windows.Forms.Button();
+            this.playButtonTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // rocketButton1
@@ -46,9 +49,9 @@
             this.rocketButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rocketButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rocketButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rocketButton1.Location = new System.Drawing.Point(460, 175);
+            this.rocketButton1.Location = new System.Drawing.Point(441, 128);
             this.rocketButton1.Name = "rocketButton1";
-            this.rocketButton1.Size = new System.Drawing.Size(192, 421);
+            this.rocketButton1.Size = new System.Drawing.Size(225, 468);
             this.rocketButton1.TabIndex = 0;
             this.rocketButton1.UseVisualStyleBackColor = false;
             this.rocketButton1.Click += new System.EventHandler(this.rocketButton1_Click);
@@ -99,13 +102,52 @@
             this.restartButton.UseVisualStyleBackColor = false;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
+            // settingsButton
+            // 
+            this.settingsButton.BackColor = System.Drawing.Color.Transparent;
+            this.settingsButton.BackgroundImage = global::RocketClickerGame.Properties.Resources.Options;
+            this.settingsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.settingsButton.FlatAppearance.BorderSize = 0;
+            this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.settingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settingsButton.Location = new System.Drawing.Point(946, 12);
+            this.settingsButton.Name = "settingsButton";
+            this.settingsButton.Size = new System.Drawing.Size(58, 61);
+            this.settingsButton.TabIndex = 4;
+            this.settingsButton.UseVisualStyleBackColor = false;
+            // 
+            // playButton
+            // 
+            this.playButton.BackColor = System.Drawing.Color.Transparent;
+            this.playButton.BackgroundImage = global::RocketClickerGame.Properties.Resources.Start;
+            this.playButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.playButton.FlatAppearance.BorderSize = 0;
+            this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.playButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.playButton.Location = new System.Drawing.Point(882, 9);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(58, 61);
+            this.playButton.TabIndex = 5;
+            this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            // 
+            // playButtonTimer
+            // 
+            this.playButtonTimer.Tick += new System.EventHandler(this.playButtonTimer_Tick);
+            // 
             // RocketClickerGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RocketClickerGame.Properties.Resources.centaurbridgeRender;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1080, 608);
+            this.Controls.Add(this.playButton);
+            this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.restartButton);
             this.Controls.Add(this.clicksLabel);
             this.Controls.Add(this.timeLabel);
@@ -114,6 +156,7 @@
             this.Name = "RocketClickerGameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rocket Factory Tycoon";
+            this.Load += new System.EventHandler(this.RocketClickerGameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,6 +169,9 @@
         private System.Windows.Forms.Label clicksLabel;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button restartButton;
+        private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Timer playButtonTimer;
     }
 }
 
