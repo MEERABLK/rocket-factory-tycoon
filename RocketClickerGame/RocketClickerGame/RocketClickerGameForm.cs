@@ -23,16 +23,25 @@ namespace RocketClickerGame
         private int movingDirection = 1;
         // how far it moves left/right
         private int movingRange = 8;
-
+       
+        //to change based on upgrades
+        int pointsPerClick = 1;
+       
         // how fast it moves
         private int movingSpeed = 3;
 
 
         SoundPlayer musicPlayer;
 
-        private int flameFrame = 0;
+        private List<Image> flameFrames = new List<Image>();
+        private int flameFrameIndex = 0;
+
 
         private int points = 0;
+
+        //enhancements
+        private List<RocketEnhancement> rocketEnhancements = new List<RocketEnhancement>();
+        private int currentEnhancementIndex = 0;
 
 
         public RocketClickerGameForm()
@@ -49,13 +58,13 @@ namespace RocketClickerGame
             firePictureBox.Location = new Point(rocketButton1.Location.X-150, rocketButton1.Location.Y + rocketButton1.Height);
 
             flameTimer.Start();
-
+            addToList();
 
         }
 
         private void RocketClickerGameForm_Load(object sender, EventArgs e)
         {
-
+            addFrames();
             musicPlayer = new SoundPlayer(Properties.Resources.backgroundMusic);
             // Loops the music infinetely
             musicPlayer.PlayLooping(); 
@@ -68,7 +77,23 @@ namespace RocketClickerGame
 
            
         }
-
+        private void addFrames()
+        {
+            flameFrames.Add(Properties.Resources.fire1__01);
+            flameFrames.Add(Properties.Resources.fire1__02);
+            flameFrames.Add(Properties.Resources.fire1__03);
+            flameFrames.Add(Properties.Resources.fire1__04);
+            flameFrames.Add(Properties.Resources.fire1__05);
+            flameFrames.Add(Properties.Resources.fire1__07);
+            flameFrames.Add(Properties.Resources.fire1__06);
+            flameFrames.Add(Properties.Resources.fire1__07);
+            flameFrames.Add(Properties.Resources.fire1__08);
+            flameFrames.Add(Properties.Resources.fire1__09);
+            flameFrames.Add(Properties.Resources.fire1__10);
+            flameFrames.Add(Properties.Resources.fire1__11);
+            flameFrames.Add(Properties.Resources.fire1__12);
+            flameFrames.Add(Properties.Resources.fire1__13);
+        }
         private void rocketButton1_Click(object sender, EventArgs e)
         {
             //rocket timer starts at click
@@ -81,8 +106,7 @@ namespace RocketClickerGame
             //the number of clicks increment at each click
             clicks++;
 
-            //to change based on upgrades
-            int pointsPerClick = 1;
+            
 
             points += pointsPerClick;
 
@@ -176,75 +200,95 @@ namespace RocketClickerGame
 
         private void flameTimer_Tick(object sender, EventArgs e)
         {
-           
-            //modulo 14 because of 0-13 cases and frames
 
-            flameFrame = (flameFrame + 1) % 14;
-            //enum class to flip clockwise with part of system drawing namespace
-            //Rotate180FlipNone is its field 
-            RotateFlipType rotateAngle = RotateFlipType.Rotate180FlipNone;
+            //cycles through the frames of the fire animation in a loop
+            //wraps around to 0 when it reaches the end of the list (because % is the remainder operator)
+            //after 13 frames it goes back to 0 
+            flameFrameIndex = (flameFrameIndex + 1) % flameFrames.Count;
+            // It shows the current fire frame in the PictureBox
+            //makes a fresh copy of the image just for this display, leaving the original untouched.
+            firePictureBox.Image = (Image)flameFrames[flameFrameIndex].Clone();
+            //flif 90degrees
+            firePictureBox.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
 
-            switch (flameFrame)
+
+        }
+
+      
+
+        //add rocket image to list
+        public void addToList()
+        {
+            rocketEnhancements.Add(new RocketEnhancement
             {
-                case 0:
-                    firePictureBox.Image = Properties.Resources.fire1__01;
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                case 1:
-                    firePictureBox.Image = Properties.Resources.fire1__02;
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                case 2:
-                   firePictureBox.Image = Properties.Resources.fire1__03;
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 3: 
-                    firePictureBox.Image= Properties.Resources.fire1__04;
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 4:
-                    firePictureBox.Image=(Properties.Resources.fire1__05);
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 5:
-                    firePictureBox.Image=Properties.Resources.fire1__07;
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 6:
-                    firePictureBox.Image = ((Properties.Resources.fire1__06));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 7:
-                    firePictureBox.Image=((Properties.Resources.fire1__07));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;  
-                    case 8: 
-                    firePictureBox.Image= ((Properties.Resources.fire1__08));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 9:
-                    firePictureBox.Image= ((Properties.Resources.fire1__09));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 10:
-                    firePictureBox.Image= ((Properties.Resources.fire1__10));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 11:
-                    firePictureBox.Image=((Properties.Resources.fire1__11));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 12:
-                    firePictureBox.Image=((Properties.Resources.fire1__12));
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;
-                    case 13:
-                    firePictureBox.Image=(Properties.Resources.fire1__13);
-                    firePictureBox.Image.RotateFlip(rotateAngle);
-                    break;  
-                                
+                image = Properties.Resources.smallfighter,
+                Price = 300,
+                Name = "Jet Fighter"
+            });
 
+            rocketEnhancements.Add(new RocketEnhancement
+            {
+                image = Properties.Resources.spaceShuttle1,
+                Price = 550,
+                Name = "Space Shuttle"
+            });
+        }
+
+        //to show go through the rockets
+        public void ShowCurrentEnhancement()
+        {
+            var current = rocketEnhancements[currentEnhancementIndex];
+            //set picture box image
+            //stretch it
+            enhancePictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            enhancePictureBox.Image = current.image;
+            rocketNameLabel.Text = $"{current.Name}";
+            enhanceCostButton.Text = $" {current.Price}" + " points";
+        }
+
+        //change rocket image and deduct points
+        private void enhanceCostButton_Click(object sender, EventArgs e)
+        {
+            var selected = rocketEnhancements[currentEnhancementIndex];
+
+            if (points >= selected.Price)
+            {
+                // Deduct points first
+                points -= selected.Price;
+
+                // Update UI immediately
+                pointsLabel.Text = "Points: " + points;
+
+                MessageBox.Show($"Purchased: {selected.Name}!");
+
+                // Increase pointsPerClick depending on which upgrade
+                if (currentEnhancementIndex == 0)
+                {
+                    pointsPerClick += 50; // First upgrade
+                }
+                else if (currentEnhancementIndex == 1)
+                {
+                    //Second upgrade (total increase = 100)
+                      pointsPerClick += 50;
+                }
+
+                rocketButton1.BackgroundImage = selected.image;
+                rocketButton1.BackgroundImageLayout = ImageLayout.Stretch;
+
+                // go to next enhancement if any
+                if (currentEnhancementIndex < rocketEnhancements.Count - 1)
+                {
+                    currentEnhancementIndex++;
+                    ShowCurrentEnhancement();
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Not enough points!");
             }
         }
     }
 }
+
