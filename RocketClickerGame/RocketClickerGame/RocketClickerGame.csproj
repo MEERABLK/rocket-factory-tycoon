@@ -55,6 +55,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RocketEnhancement.cs" />
+    <Compile Include="SpecialEffects.cs" />
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\moonBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meteor1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

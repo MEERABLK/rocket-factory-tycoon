@@ -9,9 +9,10 @@ namespace RocketClickerGame
 {
     internal class RocketEnhancement
     {
-        public Image image;
-        public int Price;
-        public string Name;
+        // Auto-implemented properties 
+        public Image Image { get; set; }
+        public int Price { get; set; }
+        public string Name { get; set; }
 
   
 

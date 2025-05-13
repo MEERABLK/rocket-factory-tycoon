@@ -102,6 +102,16 @@ namespace RocketClickerGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dwarven_scout_gray_hair_braided_beard {
+            get {
+                object obj = ResourceManager.GetObject("dwarven_scout_gray_hair_braided_beard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fire1__01 {
             get {
                 object obj = ResourceManager.GetObject("fire1__01", resourceCulture);
@@ -232,6 +242,46 @@ namespace RocketClickerGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap gryphon_rider {
+            get {
+                object obj = ResourceManager.GetObject("gryphon_rider", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Meteor1 {
+            get {
+                object obj = ResourceManager.GetObject("Meteor1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap militia {
+            get {
+                object obj = ResourceManager.GetObject("militia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap miner {
+            get {
+                object obj = ResourceManager.GetObject("miner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap moonBackground {
             get {
                 object obj = ResourceManager.GetObject("moonBackground", resourceCulture);
@@ -255,6 +305,16 @@ namespace RocketClickerGame.Properties {
         internal static System.Drawing.Bitmap Restart {
             get {
                 object obj = ResourceManager.GetObject("Restart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap return_goods {
+            get {
+                object obj = ResourceManager.GetObject("return_goods", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

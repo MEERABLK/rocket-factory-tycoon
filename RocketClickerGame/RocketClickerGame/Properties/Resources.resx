@@ -118,41 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fire1__02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="conte_magnus-cc0-Rockets1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conte_magnus-cc0-Rockets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spaceShuttle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spaceShuttle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fire1__03" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fire1__01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fire1__07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire1_ 07.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fire1__05" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="return_goods" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\return_goods.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fire1__13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire1__02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Start.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fire1__06" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="militia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\militia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fire1__04" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire1__11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="conte_magnus-cc0-Rockets1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\conte_magnus-cc0-Rockets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dwarven_scout_gray_hair_braided_beard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dwarven_scout_gray_hair_braided_beard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Space-Background-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Space-Background-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="conte_magnus-cc0-Rockets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\conte_magnus-cc0-Rockets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="miner" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\miner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fire1__12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire1_ 12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,34 +160,52 @@
   <data name="fire1__10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire1_ 10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="centaurbridgeRender" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\centaurbridgeRender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="smallfighter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smallfighter0006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire1__04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="backgroundMusic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blast_off!(wav).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Restart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Restart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire1__06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 06.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire1__05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 05.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fire1__09" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire1_ 09.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fire1__11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fire1_ 11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire1__01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="smallfighter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smallfighter0006.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="centaurbridgeRender" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\centaurbridgeRender.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire1__13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Meteor1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Meteor1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fire1__08" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fire1_ 08.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="conte_magnus-cc0-Rockets" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conte_magnus-cc0-Rockets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spaceShuttle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spaceShuttle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Space-Background-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Space-Background-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fire1__03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire1_ 03.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="moonBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\moonBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gryphon_rider" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gryphon_rider.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

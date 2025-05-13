@@ -54,15 +54,20 @@
             this.speedLabel = new System.Windows.Forms.Label();
             this.speedCostButton = new System.Windows.Forms.Button();
             this.spacePictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dayPictureBox = new System.Windows.Forms.PictureBox();
             this.spaceLabel = new System.Windows.Forms.Label();
             this.spaceCostButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nightCostButton = new System.Windows.Forms.Button();
+            this.nightLabel = new System.Windows.Forms.Label();
+            this.effectCostbutton = new System.Windows.Forms.Button();
+            this.meteorPictureBox1 = new System.Windows.Forms.PictureBox();
+            this.fireMeteorLabel = new System.Windows.Forms.Label();
+            this.meteorTimer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.firePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enhancePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spacePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dayPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meteorPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rocketButton1
@@ -199,7 +204,7 @@
             this.upgradesLabel.BackColor = System.Drawing.Color.Transparent;
             this.upgradesLabel.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upgradesLabel.ForeColor = System.Drawing.Color.Aquamarine;
-            this.upgradesLabel.Location = new System.Drawing.Point(931, 281);
+            this.upgradesLabel.Location = new System.Drawing.Point(1005, 281);
             this.upgradesLabel.Name = "upgradesLabel";
             this.upgradesLabel.Size = new System.Drawing.Size(137, 41);
             this.upgradesLabel.TabIndex = 8;
@@ -210,9 +215,9 @@
             this.rocketEnhanceLabel.BackColor = System.Drawing.Color.Transparent;
             this.rocketEnhanceLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rocketEnhanceLabel.ForeColor = System.Drawing.Color.Gold;
-            this.rocketEnhanceLabel.Location = new System.Drawing.Point(892, 312);
+            this.rocketEnhanceLabel.Location = new System.Drawing.Point(1022, 335);
             this.rocketEnhanceLabel.Name = "rocketEnhanceLabel";
-            this.rocketEnhanceLabel.Size = new System.Drawing.Size(165, 41);
+            this.rocketEnhanceLabel.Size = new System.Drawing.Size(165, 48);
             this.rocketEnhanceLabel.TabIndex = 9;
             this.rocketEnhanceLabel.Text = "Rocket  Enhancement";
             // 
@@ -221,7 +226,7 @@
             this.factoryImprovementsLabel.BackColor = System.Drawing.Color.Transparent;
             this.factoryImprovementsLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.factoryImprovementsLabel.ForeColor = System.Drawing.Color.Gold;
-            this.factoryImprovementsLabel.Location = new System.Drawing.Point(892, 417);
+            this.factoryImprovementsLabel.Location = new System.Drawing.Point(1022, 456);
             this.factoryImprovementsLabel.Name = "factoryImprovementsLabel";
             this.factoryImprovementsLabel.Size = new System.Drawing.Size(165, 19);
             this.factoryImprovementsLabel.TabIndex = 10;
@@ -232,9 +237,9 @@
             this.powerUpsLabel.BackColor = System.Drawing.Color.Transparent;
             this.powerUpsLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerUpsLabel.ForeColor = System.Drawing.Color.Gold;
-            this.powerUpsLabel.Location = new System.Drawing.Point(879, 620);
+            this.powerUpsLabel.Location = new System.Drawing.Point(1022, 614);
             this.powerUpsLabel.Name = "powerUpsLabel";
-            this.powerUpsLabel.Size = new System.Drawing.Size(165, 41);
+            this.powerUpsLabel.Size = new System.Drawing.Size(165, 17);
             this.powerUpsLabel.TabIndex = 11;
             this.powerUpsLabel.Text = "Power Ups";
             // 
@@ -243,9 +248,9 @@
             this.specialItemsLabel.BackColor = System.Drawing.Color.Transparent;
             this.specialItemsLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.specialItemsLabel.ForeColor = System.Drawing.Color.Gold;
-            this.specialItemsLabel.Location = new System.Drawing.Point(915, 695);
+            this.specialItemsLabel.Location = new System.Drawing.Point(1022, 713);
             this.specialItemsLabel.Name = "specialItemsLabel";
-            this.specialItemsLabel.Size = new System.Drawing.Size(165, 41);
+            this.specialItemsLabel.Size = new System.Drawing.Size(165, 16);
             this.specialItemsLabel.TabIndex = 12;
             this.specialItemsLabel.Text = "Special Items";
             // 
@@ -264,7 +269,7 @@
             // 
             this.enhancePictureBox.BackColor = System.Drawing.Color.LightSeaGreen;
             this.enhancePictureBox.Image = global::RocketClickerGame.Properties.Resources.smallfighter;
-            this.enhancePictureBox.Location = new System.Drawing.Point(882, 338);
+            this.enhancePictureBox.Location = new System.Drawing.Point(982, 365);
             this.enhancePictureBox.Name = "enhancePictureBox";
             this.enhancePictureBox.Size = new System.Drawing.Size(71, 76);
             this.enhancePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -275,7 +280,7 @@
             // 
             this.enhanceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.enhanceCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enhanceCostButton.Location = new System.Drawing.Point(959, 379);
+            this.enhanceCostButton.Location = new System.Drawing.Point(1066, 406);
             this.enhanceCostButton.Name = "enhanceCostButton";
             this.enhanceCostButton.Size = new System.Drawing.Size(121, 35);
             this.enhanceCostButton.TabIndex = 17;
@@ -289,7 +294,7 @@
             this.rocketNameLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.rocketNameLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rocketNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.rocketNameLabel.Location = new System.Drawing.Point(969, 353);
+            this.rocketNameLabel.Location = new System.Drawing.Point(875, 406);
             this.rocketNameLabel.Name = "rocketNameLabel";
             this.rocketNameLabel.Size = new System.Drawing.Size(99, 19);
             this.rocketNameLabel.TabIndex = 18;
@@ -301,7 +306,7 @@
             this.fuelLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.fuelLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fuelLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fuelLabel.Location = new System.Drawing.Point(895, 642);
+            this.fuelLabel.Location = new System.Drawing.Point(987, 654);
             this.fuelLabel.Name = "fuelLabel";
             this.fuelLabel.Size = new System.Drawing.Size(45, 19);
             this.fuelLabel.TabIndex = 19;
@@ -311,7 +316,7 @@
             // 
             this.fuelCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.fuelCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fuelCostButton.Location = new System.Drawing.Point(974, 616);
+            this.fuelCostButton.Location = new System.Drawing.Point(1050, 634);
             this.fuelCostButton.Name = "fuelCostButton";
             this.fuelCostButton.Size = new System.Drawing.Size(121, 35);
             this.fuelCostButton.TabIndex = 20;
@@ -324,7 +329,7 @@
             this.speedLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.speedLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.speedLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.speedLabel.Location = new System.Drawing.Point(897, 676);
+            this.speedLabel.Location = new System.Drawing.Point(976, 683);
             this.speedLabel.Name = "speedLabel";
             this.speedLabel.Size = new System.Drawing.Size(56, 19);
             this.speedLabel.TabIndex = 21;
@@ -334,7 +339,7 @@
             // 
             this.speedCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.speedCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.speedCostButton.Location = new System.Drawing.Point(974, 657);
+            this.speedCostButton.Location = new System.Drawing.Point(1050, 675);
             this.speedCostButton.Name = "speedCostButton";
             this.speedCostButton.Size = new System.Drawing.Size(121, 35);
             this.speedCostButton.TabIndex = 22;
@@ -344,22 +349,22 @@
             // spacePictureBox
             // 
             this.spacePictureBox.Image = global::RocketClickerGame.Properties.Resources.Space_Background_1;
-            this.spacePictureBox.Location = new System.Drawing.Point(912, 443);
+            this.spacePictureBox.Location = new System.Drawing.Point(980, 495);
             this.spacePictureBox.Name = "spacePictureBox";
             this.spacePictureBox.Size = new System.Drawing.Size(73, 50);
             this.spacePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spacePictureBox.TabIndex = 23;
             this.spacePictureBox.TabStop = false;
             // 
-            // pictureBox2
+            // dayPictureBox
             // 
-            this.pictureBox2.Image = global::RocketClickerGame.Properties.Resources.moonBackground;
-            this.pictureBox2.Location = new System.Drawing.Point(912, 529);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
+            this.dayPictureBox.Image = global::RocketClickerGame.Properties.Resources.moonBackground;
+            this.dayPictureBox.Location = new System.Drawing.Point(980, 551);
+            this.dayPictureBox.Name = "dayPictureBox";
+            this.dayPictureBox.Size = new System.Drawing.Size(73, 50);
+            this.dayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dayPictureBox.TabIndex = 24;
+            this.dayPictureBox.TabStop = false;
             // 
             // spaceLabel
             // 
@@ -367,7 +372,7 @@
             this.spaceLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.spaceLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spaceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.spaceLabel.Location = new System.Drawing.Point(1025, 436);
+            this.spaceLabel.Location = new System.Drawing.Point(919, 510);
             this.spaceLabel.Name = "spaceLabel";
             this.spaceLabel.Size = new System.Drawing.Size(55, 19);
             this.spaceLabel.TabIndex = 25;
@@ -377,35 +382,74 @@
             // 
             this.spaceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.spaceCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spaceCostButton.Location = new System.Drawing.Point(991, 458);
+            this.spaceCostButton.Location = new System.Drawing.Point(1059, 510);
             this.spaceCostButton.Name = "spaceCostButton";
             this.spaceCostButton.Size = new System.Drawing.Size(115, 35);
             this.spaceCostButton.TabIndex = 26;
             this.spaceCostButton.Text = "1000 points";
             this.spaceCostButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // nightCostButton
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(991, 544);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 35);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "2000 points";
-            this.button2.UseVisualStyleBackColor = false;
+            this.nightCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.nightCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nightCostButton.Location = new System.Drawing.Point(1056, 566);
+            this.nightCostButton.Name = "nightCostButton";
+            this.nightCostButton.Size = new System.Drawing.Size(115, 35);
+            this.nightCostButton.TabIndex = 27;
+            this.nightCostButton.Text = "2000 points";
+            this.nightCostButton.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // nightLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(1013, 522);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 19);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "MoonNight";
+            this.nightLabel.AutoSize = true;
+            this.nightLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.nightLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nightLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nightLabel.Location = new System.Drawing.Point(870, 574);
+            this.nightLabel.Name = "nightLabel";
+            this.nightLabel.Size = new System.Drawing.Size(100, 19);
+            this.nightLabel.TabIndex = 28;
+            this.nightLabel.Text = "MoonNight";
+            // 
+            // effectCostbutton
+            // 
+            this.effectCostbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.effectCostbutton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.effectCostbutton.Location = new System.Drawing.Point(1050, 734);
+            this.effectCostbutton.Name = "effectCostbutton";
+            this.effectCostbutton.Size = new System.Drawing.Size(121, 35);
+            this.effectCostbutton.TabIndex = 29;
+            this.effectCostbutton.Text = "600 points";
+            this.effectCostbutton.UseVisualStyleBackColor = false;
+            this.effectCostbutton.Click += new System.EventHandler(this.effectCostbutton_Click);
+            // 
+            // meteorPictureBox1
+            // 
+            this.meteorPictureBox1.Image = global::RocketClickerGame.Properties.Resources.Meteor1;
+            this.meteorPictureBox1.Location = new System.Drawing.Point(1009, 734);
+            this.meteorPictureBox1.Name = "meteorPictureBox1";
+            this.meteorPictureBox1.Size = new System.Drawing.Size(35, 35);
+            this.meteorPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.meteorPictureBox1.TabIndex = 30;
+            this.meteorPictureBox1.TabStop = false;
+            // 
+            // fireMeteorLabel
+            // 
+            this.fireMeteorLabel.AutoSize = true;
+            this.fireMeteorLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.fireMeteorLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fireMeteorLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.fireMeteorLabel.Location = new System.Drawing.Point(860, 742);
+            this.fireMeteorLabel.Name = "fireMeteorLabel";
+            this.fireMeteorLabel.Size = new System.Drawing.Size(143, 19);
+            this.fireMeteorLabel.TabIndex = 31;
+            this.fireMeteorLabel.Text = "15s Fire Shower";
+            // 
+            // meteorTimer1
+            // 
+            this.meteorTimer1.Interval = 1000;
+            this.meteorTimer1.Tick += new System.EventHandler(this.meteorTimer1_Tick);
             // 
             // RocketClickerGameForm
             // 
@@ -413,12 +457,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RocketClickerGame.Properties.Resources.centaurbridgeRender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1118, 790);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(1199, 790);
+            this.Controls.Add(this.fireMeteorLabel);
+            this.Controls.Add(this.meteorPictureBox1);
+            this.Controls.Add(this.effectCostbutton);
+            this.Controls.Add(this.nightLabel);
+            this.Controls.Add(this.nightCostButton);
             this.Controls.Add(this.spaceCostButton);
             this.Controls.Add(this.spaceLabel);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dayPictureBox);
             this.Controls.Add(this.spacePictureBox);
             this.Controls.Add(this.speedCostButton);
             this.Controls.Add(this.speedLabel);
@@ -450,7 +497,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.firePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enhancePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spacePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dayPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meteorPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,11 +531,16 @@
         private System.Windows.Forms.Label speedLabel;
         private System.Windows.Forms.Button speedCostButton;
         private System.Windows.Forms.PictureBox spacePictureBox;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox dayPictureBox;
         private System.Windows.Forms.Label spaceLabel;
         private System.Windows.Forms.Button spaceCostButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button nightCostButton;
+        private System.Windows.Forms.Label nightLabel;
+        private System.Windows.Forms.Button effectCostbutton;
+        private System.Windows.Forms.PictureBox meteorPictureBox1;
+        private System.Windows.Forms.Label fireMeteorLabel;
+        private System.Windows.Forms.Timer meteorTimer;
+        private System.Windows.Forms.Timer meteorTimer1;
     }
 }
 
