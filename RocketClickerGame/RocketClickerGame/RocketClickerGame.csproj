@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryImprovements.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="RocketClickerGameForm.cs">
       <SubType>Form</SubType>

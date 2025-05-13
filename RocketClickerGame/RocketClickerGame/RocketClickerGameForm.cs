@@ -27,7 +27,7 @@ namespace RocketClickerGame
         int pointsPerClick = 1;
 
         // The player's points
-        private int points = 1000;
+        private int points = 0;
 
 
         //for play button
@@ -80,6 +80,13 @@ namespace RocketClickerGame
         private int passivePointsPerSecond = 0;
 
 
+        //factory improvements
+        List<FactoryImprovements> factoryImprovements = new List<FactoryImprovements>();
+
+
+        private int currentFactoryIndex = 0;
+
+
         public RocketClickerGameForm()
         {
             InitializeComponent();
@@ -97,6 +104,18 @@ namespace RocketClickerGame
             addToEnhanceList();
             addSpecialEffects();
             addHelpersToList();
+            addFactoryUpgradeToList();
+
+            riderCostButton.Enabled = false;
+            engineerCostButton.Enabled = false;
+            minerCostButton.Enabled = false;
+            spaceCostButton.Enabled = false;
+            nightCostButton.Enabled = false;
+            rocketButton1.Enabled = false;
+            enhanceCostButton.Enabled = false;
+            fuelCostButton.Enabled = false;
+            speedCostButton.Enabled = false;
+            effectCostbutton.Enabled = false;
 
         }
 
@@ -185,13 +204,27 @@ namespace RocketClickerGame
                 timer.Stop();
                 clicks = 0;
                 ticks = 0;
+                points = 0;
+
 
                 //timer label back to initial state
                 timeLabel.Text = "Time: 0";
                 clicksLabel.Text = "Clicks: 0";
+                pointsLabel.Text = "Points: 0";
                 playButton.Enabled = true;
-
+                riderCostButton.Enabled = false;
+                engineerCostButton.Enabled = false;
+                minerCostButton.Enabled = false;
+                spaceCostButton.Enabled = false;
+                nightCostButton.Enabled = false;
                 rocketButton1.Enabled = false;
+                enhanceCostButton.Enabled = false;
+                fuelCostButton.Enabled = false;
+                speedCostButton.Enabled = false;
+                effectCostbutton.Enabled = false;
+
+                passivePointTimer.Stop();
+
             }
         }
         private void playButton_Click(object sender, EventArgs e)
@@ -203,7 +236,15 @@ namespace RocketClickerGame
 
             // Enable rocket button when Play is clicked
             rocketButton1.Enabled = true;
-
+            riderCostButton.Enabled = true;
+            engineerCostButton.Enabled = true;
+            minerCostButton.Enabled = true;
+            spaceCostButton.Enabled = true;
+            nightCostButton.Enabled = true;
+            enhanceCostButton.Enabled = true;
+            fuelCostButton.Enabled = true;
+            speedCostButton.Enabled = true;
+            effectCostbutton.Enabled = true;
             //disable Play button so it can’t be clicked again
             playButton.Enabled = false;
         }
@@ -408,8 +449,6 @@ namespace RocketClickerGame
 
         private void meteorTimer1_Tick(object sender, EventArgs e)
         {
-
-
             // stop after 15 seconds
             //increase to get the actual count from timer
             tickCount++;
@@ -637,6 +676,80 @@ namespace RocketClickerGame
                 {
                     MessageBox.Show("Not enough points!");
                 }
+            }
+        }
+
+
+        //Factory improvements
+        //add ojects to list
+        private void addFactoryUpgradeToList()
+        {
+            factoryImprovements.Add(new FactoryImprovements
+            {
+                Name = "Space",
+                Price = 2000,
+                Image = Properties.Resources.Space_Background_1
+            });
+
+            factoryImprovements.Add(new FactoryImprovements
+            {
+                Name = "MoonNight",
+                Price = 1000,
+                Image = Properties.Resources.moonBackground
+            });
+        }
+        
+        private void spaceCostButton_Click(object sender, EventArgs e)
+        {
+            var selected = factoryImprovements[currentFactoryIndex];
+
+            if (points >= selected.Price)
+            {
+                points -= selected.Price;
+
+                pointsLabel.Text = "Points: " + points;
+
+                MessageBox.Show("Welcome to Space!");
+
+                this.BackgroundImage = selected.Image;
+                this.BackgroundImageLayout = ImageLayout.Stretch;
+
+                // Disable the button after purchase
+                spaceCostButton.Enabled = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Not enough points!");
+            }
+        
+    }
+
+        private void nightCostButton_Click(object sender, EventArgs e)
+        {
+            {
+                var selected = factoryImprovements[1];
+
+                if (points >= selected.Price)
+                {
+                    points -= selected.Price;
+
+                    pointsLabel.Text = "Points: " + points;
+
+                    MessageBox.Show("Moon Night!");
+
+                    this.BackgroundImage = selected.Image;
+                    this.BackgroundImageLayout = ImageLayout.Stretch;
+
+                    // Disable the button after purchase
+                    nightCostButton.Enabled = false;
+
+                }
+                else
+                {
+                    MessageBox.Show("Not enough points!");
+                }
+
             }
         }
     }

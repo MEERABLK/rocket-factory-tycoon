@@ -19,3 +19,14 @@ C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debu
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\RocketClickerGame.exe.config
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\RocketClickerGame.exe
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\RocketClickerGame.pdb
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.AssemblyReference.cache
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.RocketClickerGameForm.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.Properties.Resources.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.GenerateResource.cache
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.CoreCompileInputs.cache
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb

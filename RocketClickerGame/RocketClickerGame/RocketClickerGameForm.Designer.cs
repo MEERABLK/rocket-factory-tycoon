@@ -215,7 +215,7 @@
             // upgradesLabel
             // 
             this.upgradesLabel.BackColor = System.Drawing.Color.Transparent;
-            this.upgradesLabel.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upgradesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upgradesLabel.ForeColor = System.Drawing.Color.Aquamarine;
             this.upgradesLabel.Location = new System.Drawing.Point(1005, 291);
             this.upgradesLabel.Name = "upgradesLabel";
@@ -226,7 +226,7 @@
             // rocketEnhanceLabel
             // 
             this.rocketEnhanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.rocketEnhanceLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rocketEnhanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rocketEnhanceLabel.ForeColor = System.Drawing.Color.Gold;
             this.rocketEnhanceLabel.Location = new System.Drawing.Point(1022, 335);
             this.rocketEnhanceLabel.Name = "rocketEnhanceLabel";
@@ -237,7 +237,7 @@
             // factoryImprovementsLabel
             // 
             this.factoryImprovementsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.factoryImprovementsLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.factoryImprovementsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.factoryImprovementsLabel.ForeColor = System.Drawing.Color.Gold;
             this.factoryImprovementsLabel.Location = new System.Drawing.Point(1022, 456);
             this.factoryImprovementsLabel.Name = "factoryImprovementsLabel";
@@ -248,7 +248,7 @@
             // powerUpsLabel
             // 
             this.powerUpsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.powerUpsLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.powerUpsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.powerUpsLabel.ForeColor = System.Drawing.Color.Gold;
             this.powerUpsLabel.Location = new System.Drawing.Point(1022, 614);
             this.powerUpsLabel.Name = "powerUpsLabel";
@@ -259,7 +259,7 @@
             // specialItemsLabel
             // 
             this.specialItemsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.specialItemsLabel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.specialItemsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.specialItemsLabel.ForeColor = System.Drawing.Color.Gold;
             this.specialItemsLabel.Location = new System.Drawing.Point(1022, 713);
             this.specialItemsLabel.Name = "specialItemsLabel";
@@ -270,7 +270,7 @@
             // helpersLabel
             // 
             this.helpersLabel.BackColor = System.Drawing.Color.Transparent;
-            this.helpersLabel.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.helpersLabel.ForeColor = System.Drawing.Color.Aquamarine;
             this.helpersLabel.Location = new System.Drawing.Point(12, 269);
             this.helpersLabel.Name = "helpersLabel";
@@ -292,7 +292,7 @@
             // enhanceCostButton
             // 
             this.enhanceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.enhanceCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enhanceCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enhanceCostButton.Location = new System.Drawing.Point(1066, 406);
             this.enhanceCostButton.Name = "enhanceCostButton";
             this.enhanceCostButton.Size = new System.Drawing.Size(121, 35);
@@ -305,11 +305,11 @@
             // 
             this.rocketNameLabel.AutoSize = true;
             this.rocketNameLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.rocketNameLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rocketNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rocketNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.rocketNameLabel.Location = new System.Drawing.Point(875, 406);
             this.rocketNameLabel.Name = "rocketNameLabel";
-            this.rocketNameLabel.Size = new System.Drawing.Size(99, 19);
+            this.rocketNameLabel.Size = new System.Drawing.Size(85, 20);
             this.rocketNameLabel.TabIndex = 18;
             this.rocketNameLabel.Text = "Jet Fighter";
             // 
@@ -317,18 +317,18 @@
             // 
             this.fuelLabel.AutoSize = true;
             this.fuelLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.fuelLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fuelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fuelLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fuelLabel.Location = new System.Drawing.Point(987, 642);
             this.fuelLabel.Name = "fuelLabel";
-            this.fuelLabel.Size = new System.Drawing.Size(45, 19);
+            this.fuelLabel.Size = new System.Drawing.Size(40, 20);
             this.fuelLabel.TabIndex = 19;
             this.fuelLabel.Text = "Fuel";
             // 
             // fuelCostButton
             // 
             this.fuelCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.fuelCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fuelCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fuelCostButton.Location = new System.Drawing.Point(1066, 634);
             this.fuelCostButton.Name = "fuelCostButton";
             this.fuelCostButton.Size = new System.Drawing.Size(121, 35);
@@ -340,18 +340,18 @@
             // 
             this.speedLabel.AutoSize = true;
             this.speedLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.speedLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.speedLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.speedLabel.Location = new System.Drawing.Point(987, 683);
             this.speedLabel.Name = "speedLabel";
-            this.speedLabel.Size = new System.Drawing.Size(56, 19);
+            this.speedLabel.Size = new System.Drawing.Size(56, 20);
             this.speedLabel.TabIndex = 21;
             this.speedLabel.Text = "Speed";
             // 
             // speedCostButton
             // 
             this.speedCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.speedCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speedCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.speedCostButton.Location = new System.Drawing.Point(1066, 675);
             this.speedCostButton.Name = "speedCostButton";
             this.speedCostButton.Size = new System.Drawing.Size(121, 35);
@@ -383,52 +383,54 @@
             // 
             this.spaceLabel.AutoSize = true;
             this.spaceLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.spaceLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spaceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spaceLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.spaceLabel.Location = new System.Drawing.Point(919, 510);
             this.spaceLabel.Name = "spaceLabel";
-            this.spaceLabel.Size = new System.Drawing.Size(55, 19);
+            this.spaceLabel.Size = new System.Drawing.Size(55, 20);
             this.spaceLabel.TabIndex = 25;
             this.spaceLabel.Text = "Space";
             // 
             // spaceCostButton
             // 
             this.spaceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.spaceCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spaceCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spaceCostButton.Location = new System.Drawing.Point(1066, 510);
             this.spaceCostButton.Name = "spaceCostButton";
             this.spaceCostButton.Size = new System.Drawing.Size(121, 35);
             this.spaceCostButton.TabIndex = 26;
-            this.spaceCostButton.Text = "1000 points";
+            this.spaceCostButton.Text = "2000 points";
             this.spaceCostButton.UseVisualStyleBackColor = false;
+            this.spaceCostButton.Click += new System.EventHandler(this.spaceCostButton_Click);
             // 
             // nightCostButton
             // 
             this.nightCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.nightCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nightCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nightCostButton.Location = new System.Drawing.Point(1066, 566);
             this.nightCostButton.Name = "nightCostButton";
             this.nightCostButton.Size = new System.Drawing.Size(121, 35);
             this.nightCostButton.TabIndex = 27;
-            this.nightCostButton.Text = "2000 points";
+            this.nightCostButton.Text = "1000 points";
             this.nightCostButton.UseVisualStyleBackColor = false;
+            this.nightCostButton.Click += new System.EventHandler(this.nightCostButton_Click);
             // 
             // nightLabel
             // 
             this.nightLabel.AutoSize = true;
             this.nightLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.nightLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nightLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nightLabel.Location = new System.Drawing.Point(874, 566);
             this.nightLabel.Name = "nightLabel";
-            this.nightLabel.Size = new System.Drawing.Size(100, 19);
+            this.nightLabel.Size = new System.Drawing.Size(86, 20);
             this.nightLabel.TabIndex = 28;
             this.nightLabel.Text = "MoonNight";
             // 
             // effectCostbutton
             // 
             this.effectCostbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.effectCostbutton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.effectCostbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.effectCostbutton.Location = new System.Drawing.Point(1050, 734);
             this.effectCostbutton.Name = "effectCostbutton";
             this.effectCostbutton.Size = new System.Drawing.Size(121, 35);
@@ -451,11 +453,11 @@
             // 
             this.meteorLabel.AutoSize = true;
             this.meteorLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.meteorLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meteorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meteorLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.meteorLabel.Location = new System.Drawing.Point(860, 742);
             this.meteorLabel.Name = "meteorLabel";
-            this.meteorLabel.Size = new System.Drawing.Size(143, 19);
+            this.meteorLabel.Size = new System.Drawing.Size(124, 20);
             this.meteorLabel.TabIndex = 31;
             this.meteorLabel.Text = "15s Fire Shower";
             // 
@@ -498,11 +500,11 @@
             // 
             this.minerLabel.AutoSize = true;
             this.minerLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.minerLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.minerLabel.Location = new System.Drawing.Point(41, 553);
             this.minerLabel.Name = "minerLabel";
-            this.minerLabel.Size = new System.Drawing.Size(57, 19);
+            this.minerLabel.Size = new System.Drawing.Size(48, 20);
             this.minerLabel.TabIndex = 35;
             this.minerLabel.Text = "Miner";
             // 
@@ -510,11 +512,11 @@
             // 
             this.engineerLabel.AutoSize = true;
             this.engineerLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.engineerLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.engineerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.engineerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.engineerLabel.Location = new System.Drawing.Point(30, 434);
             this.engineerLabel.Name = "engineerLabel";
-            this.engineerLabel.Size = new System.Drawing.Size(82, 19);
+            this.engineerLabel.Size = new System.Drawing.Size(73, 20);
             this.engineerLabel.TabIndex = 36;
             this.engineerLabel.Text = "Engineer";
             // 
@@ -522,18 +524,18 @@
             // 
             this.riderLabel.AutoSize = true;
             this.riderLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.riderLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.riderLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.riderLabel.Location = new System.Drawing.Point(41, 313);
             this.riderLabel.Name = "riderLabel";
-            this.riderLabel.Size = new System.Drawing.Size(54, 19);
+            this.riderLabel.Size = new System.Drawing.Size(47, 20);
             this.riderLabel.TabIndex = 37;
             this.riderLabel.Text = "Rider";
             // 
             // riderCostButton
             // 
             this.riderCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.riderCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riderCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.riderCostButton.Location = new System.Drawing.Point(128, 365);
             this.riderCostButton.Name = "riderCostButton";
             this.riderCostButton.Size = new System.Drawing.Size(108, 35);
@@ -545,7 +547,7 @@
             // minerCostButton
             // 
             this.minerCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.minerCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minerCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minerCostButton.Location = new System.Drawing.Point(128, 596);
             this.minerCostButton.Name = "minerCostButton";
             this.minerCostButton.Size = new System.Drawing.Size(108, 35);
@@ -557,7 +559,7 @@
             // engineerCostButton
             // 
             this.engineerCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.engineerCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.engineerCostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.engineerCostButton.Location = new System.Drawing.Point(128, 470);
             this.engineerCostButton.Name = "engineerCostButton";
             this.engineerCostButton.Size = new System.Drawing.Size(108, 35);
