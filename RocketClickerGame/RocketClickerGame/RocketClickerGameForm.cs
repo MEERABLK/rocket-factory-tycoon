@@ -34,10 +34,10 @@ namespace RocketClickerGame
         private int originalX;
 
         private int movingDirection = 1;
-        
+
         // how far it moves left/right
         private int movingRange = 8;
-       
+
         // how fast it moves
         private int movingSpeed = 3;
 
@@ -46,16 +46,16 @@ namespace RocketClickerGame
 
         //for animated launch using frames list images
         private List<Image> flameFrames = new List<Image>();
-       
+
         //access list index
         private int flameFrameIndex = 0;
 
-       
+
 
         //enhancements
         //using class for list storing objects
         private List<RocketEnhancement> rocketEnhancements = new List<RocketEnhancement>();
-       
+
         //access list index
         private int currentEnhancementIndex = 0;
 
@@ -63,6 +63,7 @@ namespace RocketClickerGame
         //special items
         // list to store meteor PictureBoxes
         private List<SpecialEffects> specialEffects = new List<SpecialEffects>();
+
         private int currentEffectIndex = 0;
 
         //to add a counter for the timer as an addition ex: tickCount=15  would count 15 from timer
@@ -70,22 +71,32 @@ namespace RocketClickerGame
         private int tickCount = 0;
 
 
+        //helpers
+        List<Helpers> helpers = new List<Helpers>();
+       
+
+        private int currentHelperIndex = 0;
+
+        private int passivePointsPerSecond = 0;
+
+
         public RocketClickerGameForm()
         {
             InitializeComponent();
 
 
-           
-       
+
+
             // Disable rocket button until Play is clicked
             rocketButton1.Enabled = false;
 
             //position for the frame picture box
-            firePictureBox.Location = new Point(rocketButton1.Location.X-150, rocketButton1.Location.Y + rocketButton1.Height);
+            firePictureBox.Location = new Point(rocketButton1.Location.X - 150, rocketButton1.Location.Y + rocketButton1.Height);
 
             flameTimer.Start();
             addToEnhanceList();
             addSpecialEffects();
+            addHelpersToList();
 
         }
 
@@ -94,7 +105,7 @@ namespace RocketClickerGame
             addFrames();
             musicPlayer = new SoundPlayer(Properties.Resources.backgroundMusic);
             // Loops the music infinetely
-            musicPlayer.PlayLooping(); 
+            musicPlayer.PlayLooping();
 
             //set the origin position to the location of button on form horizental
             originalX = playButton.Location.X;
@@ -102,7 +113,7 @@ namespace RocketClickerGame
             //start timer
             playButtonTimer.Start();
 
-           
+
         }
 
 
@@ -136,7 +147,7 @@ namespace RocketClickerGame
             //the number of clicks increment at each click
             clicks++;
 
-            
+
 
             points += pointsPerClick;
 
@@ -156,7 +167,7 @@ namespace RocketClickerGame
             timeLabel.Text = "Time: " + ticks;
 
 
-            
+
         }
 
         //to restart the game
@@ -265,7 +276,7 @@ namespace RocketClickerGame
         }
 
 
-       
+
 
         //to show go through the rockets
         public void ShowCurrentEnhancement()
@@ -304,7 +315,7 @@ namespace RocketClickerGame
                 else if (currentEnhancementIndex == 1)
                 {
                     //Second upgrade (total increase = 100)
-                      pointsPerClick += 50;
+                    pointsPerClick += 50;
                 }
 
                 rocketButton1.BackgroundImage = selected.Image;
@@ -352,13 +363,13 @@ namespace RocketClickerGame
 
                 pointsLabel.Text = "Points: " + points;
 
-                MessageBox.Show("Meteor Shower Unlocked!"); 
+                MessageBox.Show("Meteor Shower Unlocked!");
 
                 // Increase pointsPerClick depending on which upgrade
                 if (currentEffectIndex == 0)
                 {
                     // First upgrade
-                    pointsPerClick += 60; 
+                    pointsPerClick += 60;
                 }
 
                 //meteor start timer
@@ -369,7 +380,7 @@ namespace RocketClickerGame
                 MessageBox.Show("Not enough points!");
             }
         }
-       
+
 
         private void StartMeteorShower()
         {
@@ -391,7 +402,7 @@ namespace RocketClickerGame
 
             meteorTimer1.Start();
 
-           
+
         }
 
 
@@ -421,14 +432,14 @@ namespace RocketClickerGame
 
             // create a new meteor PictureBox
             PictureBox meteor = new PictureBox();
-            
+
             //for first meteor type
             meteor.Image = specialEffects[0].MeteorImage;
             meteor.BackColor = Color.Transparent;
 
             meteor.SizeMode = PictureBoxSizeMode.StretchImage;
             meteor.Size = new Size(50, 50);
-            
+
 
             meteor.Location = new Point(xPosition, yPosition);
 
@@ -442,7 +453,7 @@ namespace RocketClickerGame
                 MeteorBox = meteor,
                 // random falling speed for each meteor
                 //min 5 max 15
-                FallingSpeed = rand.Next(5, 15), 
+                FallingSpeed = rand.Next(5, 15),
 
                 FallTimer = new Timer()
             };
@@ -487,7 +498,7 @@ namespace RocketClickerGame
                     //client area of the form
                     if (meteor.Top > this.ClientSize.Height)
                     {
-                         //stop its falling timer
+                        //stop its falling timer
                         effect.FallTimer.Stop();
 
                         //make picture box dissapear from screen
@@ -502,7 +513,132 @@ namespace RocketClickerGame
             }
         }
 
+        //Helpers
+        //add ojects to list
+        private void addHelpersToList()
+        {
+            helpers.Add(new Helpers
+            {
+                Name = "Rider",
+                Price = 220,
+                PointsPerSecond = 10,
+                Image = Properties.Resources.gryphon_rider
+            });
 
+            helpers.Add(new Helpers
+            {
+                Name = "Engineer",
+                Price = 500,
+                PointsPerSecond = 5,
+                Image = Properties.Resources.return_goods
+            });
+
+            helpers.Add(new Helpers
+            {
+                Name = "Miner",
+                Price = 50,
+                PointsPerSecond = 2,
+                Image = Properties.Resources.dwarven_scout_gray_hair_braided_beard
+            });
+        }
+
+        private void riderCostButton_Click(object sender, EventArgs e)
+        {
+            // Use current index or manually assign Rider index (0)
+            var selected = helpers[currentHelperIndex];
+
+            if (selected.Name == "Rider")
+            {
+                if (points >= selected.Price)
+                {
+                    points -= selected.Price;
+                    passivePointsPerSecond += selected.PointsPerSecond;
+                    pointsLabel.Text = "Points: " + points;
+                    MessageBox.Show($"{selected.Name} hired!");
+
+                    StartPassivePointGeneration();
+
+                    // Increase price and update button
+                    selected.Price = (int)(selected.Price * 1.25);
+                    riderCostButton.Text = $"{selected.Price} points";
+                }
+                else
+                {
+                    MessageBox.Show("Not enough points!");
+                }
+            }
+        
+        }
+
+
+        
+
+
+        private void StartPassivePointGeneration()
+        {
+            passivePointTimer.Stop();
+            //to add the passive ponts once remove previous tick
+            passivePointTimer.Tick -= passivePointTimer_Tick; 
+            passivePointTimer.Tick += passivePointTimer_Tick;
+            passivePointTimer.Start();
+        }
+
+        private void passivePointTimer_Tick(object sender, EventArgs e)
+        {
+            points += passivePointsPerSecond;
+            pointsLabel.Text = "Points: " + points;
+        }
+
+        private void engineerCostButton_Click(object sender, EventArgs e)
+        {
+            var selected = helpers[1]; // Engineer is at index 1
+
+            if (selected.Name == "Engineer")
+            {
+                if (points >= selected.Price)
+                {
+                    points -= selected.Price;
+                    passivePointsPerSecond += selected.PointsPerSecond;
+                    pointsLabel.Text = "Points: " + points;
+                    MessageBox.Show($"{selected.Name} hired!");
+
+                    StartPassivePointGeneration();
+
+                    selected.Price = (int)(selected.Price * 1.25);
+                    engineerCostButton.Text = $"{selected.Price} points";
+                }
+                else
+                {
+                    MessageBox.Show("Not enough points!");
+                }
+            }
+        }
+
+        private void minerCostButton_Click(object sender, EventArgs e)
+        {
+            // Miner is at index 2
+            var selected = helpers[2]; 
+
+            if (selected.Name == "Miner")
+            {
+                if (points >= selected.Price)
+                {
+                    points -= selected.Price;
+                    passivePointsPerSecond += selected.PointsPerSecond;
+                    pointsLabel.Text = "Points: " + points;
+                    MessageBox.Show($"{selected.Name} hired!");
+
+                    StartPassivePointGeneration();
+                    //increase price
+                    selected.Price = (int)(selected.Price * 1.25);
+                    minerCostButton.Text = $"{selected.Price} points";
+                }
+                else
+                {
+                    MessageBox.Show("Not enough points!");
+                }
+            }
+        }
     }
 }
 

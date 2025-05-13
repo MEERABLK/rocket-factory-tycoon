@@ -45,7 +45,7 @@
             this.factoryImprovementsLabel = new System.Windows.Forms.Label();
             this.powerUpsLabel = new System.Windows.Forms.Label();
             this.specialItemsLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.helpersLabel = new System.Windows.Forms.Label();
             this.enhancePictureBox = new System.Windows.Forms.PictureBox();
             this.enhanceCostButton = new System.Windows.Forms.Button();
             this.rocketNameLabel = new System.Windows.Forms.Label();
@@ -61,13 +61,26 @@
             this.nightLabel = new System.Windows.Forms.Label();
             this.effectCostbutton = new System.Windows.Forms.Button();
             this.meteorPictureBox1 = new System.Windows.Forms.PictureBox();
-            this.fireMeteorLabel = new System.Windows.Forms.Label();
+            this.meteorLabel = new System.Windows.Forms.Label();
             this.meteorTimer1 = new System.Windows.Forms.Timer(this.components);
+            this.riderPictureBox = new System.Windows.Forms.PictureBox();
+            this.engineerPictureBox = new System.Windows.Forms.PictureBox();
+            this.minerPictureBox = new System.Windows.Forms.PictureBox();
+            this.minerLabel = new System.Windows.Forms.Label();
+            this.engineerLabel = new System.Windows.Forms.Label();
+            this.riderLabel = new System.Windows.Forms.Label();
+            this.riderCostButton = new System.Windows.Forms.Button();
+            this.minerCostButton = new System.Windows.Forms.Button();
+            this.engineerCostButton = new System.Windows.Forms.Button();
+            this.passivePointTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.firePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enhancePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spacePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meteorPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riderPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engineerPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minerPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // rocketButton1
@@ -204,7 +217,7 @@
             this.upgradesLabel.BackColor = System.Drawing.Color.Transparent;
             this.upgradesLabel.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.upgradesLabel.ForeColor = System.Drawing.Color.Aquamarine;
-            this.upgradesLabel.Location = new System.Drawing.Point(1005, 281);
+            this.upgradesLabel.Location = new System.Drawing.Point(1005, 291);
             this.upgradesLabel.Name = "upgradesLabel";
             this.upgradesLabel.Size = new System.Drawing.Size(137, 41);
             this.upgradesLabel.TabIndex = 8;
@@ -254,16 +267,16 @@
             this.specialItemsLabel.TabIndex = 12;
             this.specialItemsLabel.Text = "Special Items";
             // 
-            // label1
+            // helpersLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Aquamarine;
-            this.label1.Location = new System.Drawing.Point(12, 281);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 41);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "HELPERS";
+            this.helpersLabel.BackColor = System.Drawing.Color.Transparent;
+            this.helpersLabel.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.helpersLabel.ForeColor = System.Drawing.Color.Aquamarine;
+            this.helpersLabel.Location = new System.Drawing.Point(12, 269);
+            this.helpersLabel.Name = "helpersLabel";
+            this.helpersLabel.Size = new System.Drawing.Size(137, 24);
+            this.helpersLabel.TabIndex = 15;
+            this.helpersLabel.Text = "HELPERS";
             // 
             // enhancePictureBox
             // 
@@ -306,7 +319,7 @@
             this.fuelLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.fuelLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fuelLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fuelLabel.Location = new System.Drawing.Point(987, 654);
+            this.fuelLabel.Location = new System.Drawing.Point(987, 642);
             this.fuelLabel.Name = "fuelLabel";
             this.fuelLabel.Size = new System.Drawing.Size(45, 19);
             this.fuelLabel.TabIndex = 19;
@@ -316,7 +329,7 @@
             // 
             this.fuelCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.fuelCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fuelCostButton.Location = new System.Drawing.Point(1050, 634);
+            this.fuelCostButton.Location = new System.Drawing.Point(1066, 634);
             this.fuelCostButton.Name = "fuelCostButton";
             this.fuelCostButton.Size = new System.Drawing.Size(121, 35);
             this.fuelCostButton.TabIndex = 20;
@@ -329,7 +342,7 @@
             this.speedLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.speedLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.speedLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.speedLabel.Location = new System.Drawing.Point(976, 683);
+            this.speedLabel.Location = new System.Drawing.Point(987, 683);
             this.speedLabel.Name = "speedLabel";
             this.speedLabel.Size = new System.Drawing.Size(56, 19);
             this.speedLabel.TabIndex = 21;
@@ -339,7 +352,7 @@
             // 
             this.speedCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.speedCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.speedCostButton.Location = new System.Drawing.Point(1050, 675);
+            this.speedCostButton.Location = new System.Drawing.Point(1066, 675);
             this.speedCostButton.Name = "speedCostButton";
             this.speedCostButton.Size = new System.Drawing.Size(121, 35);
             this.speedCostButton.TabIndex = 22;
@@ -382,9 +395,9 @@
             // 
             this.spaceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.spaceCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spaceCostButton.Location = new System.Drawing.Point(1059, 510);
+            this.spaceCostButton.Location = new System.Drawing.Point(1066, 510);
             this.spaceCostButton.Name = "spaceCostButton";
-            this.spaceCostButton.Size = new System.Drawing.Size(115, 35);
+            this.spaceCostButton.Size = new System.Drawing.Size(121, 35);
             this.spaceCostButton.TabIndex = 26;
             this.spaceCostButton.Text = "1000 points";
             this.spaceCostButton.UseVisualStyleBackColor = false;
@@ -393,9 +406,9 @@
             // 
             this.nightCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.nightCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nightCostButton.Location = new System.Drawing.Point(1056, 566);
+            this.nightCostButton.Location = new System.Drawing.Point(1066, 566);
             this.nightCostButton.Name = "nightCostButton";
-            this.nightCostButton.Size = new System.Drawing.Size(115, 35);
+            this.nightCostButton.Size = new System.Drawing.Size(121, 35);
             this.nightCostButton.TabIndex = 27;
             this.nightCostButton.Text = "2000 points";
             this.nightCostButton.UseVisualStyleBackColor = false;
@@ -406,7 +419,7 @@
             this.nightLabel.BackColor = System.Drawing.SystemColors.ControlText;
             this.nightLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nightLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nightLabel.Location = new System.Drawing.Point(870, 574);
+            this.nightLabel.Location = new System.Drawing.Point(874, 566);
             this.nightLabel.Name = "nightLabel";
             this.nightLabel.Size = new System.Drawing.Size(100, 19);
             this.nightLabel.TabIndex = 28;
@@ -434,22 +447,129 @@
             this.meteorPictureBox1.TabIndex = 30;
             this.meteorPictureBox1.TabStop = false;
             // 
-            // fireMeteorLabel
+            // meteorLabel
             // 
-            this.fireMeteorLabel.AutoSize = true;
-            this.fireMeteorLabel.BackColor = System.Drawing.SystemColors.ControlText;
-            this.fireMeteorLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fireMeteorLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.fireMeteorLabel.Location = new System.Drawing.Point(860, 742);
-            this.fireMeteorLabel.Name = "fireMeteorLabel";
-            this.fireMeteorLabel.Size = new System.Drawing.Size(143, 19);
-            this.fireMeteorLabel.TabIndex = 31;
-            this.fireMeteorLabel.Text = "15s Fire Shower";
+            this.meteorLabel.AutoSize = true;
+            this.meteorLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.meteorLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meteorLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.meteorLabel.Location = new System.Drawing.Point(860, 742);
+            this.meteorLabel.Name = "meteorLabel";
+            this.meteorLabel.Size = new System.Drawing.Size(143, 19);
+            this.meteorLabel.TabIndex = 31;
+            this.meteorLabel.Text = "15s Fire Shower";
             // 
             // meteorTimer1
             // 
             this.meteorTimer1.Interval = 1000;
             this.meteorTimer1.Tick += new System.EventHandler(this.meteorTimer1_Tick);
+            // 
+            // riderPictureBox
+            // 
+            this.riderPictureBox.Image = global::RocketClickerGame.Properties.Resources.gryphon_rider;
+            this.riderPictureBox.Location = new System.Drawing.Point(22, 335);
+            this.riderPictureBox.Name = "riderPictureBox";
+            this.riderPictureBox.Size = new System.Drawing.Size(100, 74);
+            this.riderPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.riderPictureBox.TabIndex = 32;
+            this.riderPictureBox.TabStop = false;
+            // 
+            // engineerPictureBox
+            // 
+            this.engineerPictureBox.Image = global::RocketClickerGame.Properties.Resources.return_goods;
+            this.engineerPictureBox.Location = new System.Drawing.Point(16, 456);
+            this.engineerPictureBox.Name = "engineerPictureBox";
+            this.engineerPictureBox.Size = new System.Drawing.Size(106, 73);
+            this.engineerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.engineerPictureBox.TabIndex = 33;
+            this.engineerPictureBox.TabStop = false;
+            // 
+            // minerPictureBox
+            // 
+            this.minerPictureBox.Image = global::RocketClickerGame.Properties.Resources.dwarven_scout_gray_hair_braided_beard;
+            this.minerPictureBox.Location = new System.Drawing.Point(16, 575);
+            this.minerPictureBox.Name = "minerPictureBox";
+            this.minerPictureBox.Size = new System.Drawing.Size(106, 75);
+            this.minerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.minerPictureBox.TabIndex = 34;
+            this.minerPictureBox.TabStop = false;
+            // 
+            // minerLabel
+            // 
+            this.minerLabel.AutoSize = true;
+            this.minerLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.minerLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.minerLabel.Location = new System.Drawing.Point(41, 553);
+            this.minerLabel.Name = "minerLabel";
+            this.minerLabel.Size = new System.Drawing.Size(57, 19);
+            this.minerLabel.TabIndex = 35;
+            this.minerLabel.Text = "Miner";
+            // 
+            // engineerLabel
+            // 
+            this.engineerLabel.AutoSize = true;
+            this.engineerLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.engineerLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.engineerLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.engineerLabel.Location = new System.Drawing.Point(30, 434);
+            this.engineerLabel.Name = "engineerLabel";
+            this.engineerLabel.Size = new System.Drawing.Size(82, 19);
+            this.engineerLabel.TabIndex = 36;
+            this.engineerLabel.Text = "Engineer";
+            // 
+            // riderLabel
+            // 
+            this.riderLabel.AutoSize = true;
+            this.riderLabel.BackColor = System.Drawing.SystemColors.ControlText;
+            this.riderLabel.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riderLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.riderLabel.Location = new System.Drawing.Point(41, 313);
+            this.riderLabel.Name = "riderLabel";
+            this.riderLabel.Size = new System.Drawing.Size(54, 19);
+            this.riderLabel.TabIndex = 37;
+            this.riderLabel.Text = "Rider";
+            // 
+            // riderCostButton
+            // 
+            this.riderCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.riderCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.riderCostButton.Location = new System.Drawing.Point(128, 365);
+            this.riderCostButton.Name = "riderCostButton";
+            this.riderCostButton.Size = new System.Drawing.Size(108, 35);
+            this.riderCostButton.TabIndex = 38;
+            this.riderCostButton.Text = "220 points";
+            this.riderCostButton.UseVisualStyleBackColor = false;
+            this.riderCostButton.Click += new System.EventHandler(this.riderCostButton_Click);
+            // 
+            // minerCostButton
+            // 
+            this.minerCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.minerCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minerCostButton.Location = new System.Drawing.Point(128, 596);
+            this.minerCostButton.Name = "minerCostButton";
+            this.minerCostButton.Size = new System.Drawing.Size(108, 35);
+            this.minerCostButton.TabIndex = 39;
+            this.minerCostButton.Text = "50 points";
+            this.minerCostButton.UseVisualStyleBackColor = false;
+            this.minerCostButton.Click += new System.EventHandler(this.minerCostButton_Click);
+            // 
+            // engineerCostButton
+            // 
+            this.engineerCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.engineerCostButton.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.engineerCostButton.Location = new System.Drawing.Point(128, 470);
+            this.engineerCostButton.Name = "engineerCostButton";
+            this.engineerCostButton.Size = new System.Drawing.Size(108, 35);
+            this.engineerCostButton.TabIndex = 40;
+            this.engineerCostButton.Text = "500 points";
+            this.engineerCostButton.UseVisualStyleBackColor = false;
+            this.engineerCostButton.Click += new System.EventHandler(this.engineerCostButton_Click);
+            // 
+            // passivePointTimer
+            // 
+            this.passivePointTimer.Interval = 1000;
+            this.passivePointTimer.Tick += new System.EventHandler(this.passivePointTimer_Tick);
             // 
             // RocketClickerGameForm
             // 
@@ -458,7 +578,16 @@
             this.BackgroundImage = global::RocketClickerGame.Properties.Resources.centaurbridgeRender;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1199, 790);
-            this.Controls.Add(this.fireMeteorLabel);
+            this.Controls.Add(this.engineerCostButton);
+            this.Controls.Add(this.minerCostButton);
+            this.Controls.Add(this.riderCostButton);
+            this.Controls.Add(this.riderLabel);
+            this.Controls.Add(this.engineerLabel);
+            this.Controls.Add(this.minerLabel);
+            this.Controls.Add(this.minerPictureBox);
+            this.Controls.Add(this.engineerPictureBox);
+            this.Controls.Add(this.riderPictureBox);
+            this.Controls.Add(this.meteorLabel);
             this.Controls.Add(this.meteorPictureBox1);
             this.Controls.Add(this.effectCostbutton);
             this.Controls.Add(this.nightLabel);
@@ -474,7 +603,7 @@
             this.Controls.Add(this.rocketNameLabel);
             this.Controls.Add(this.enhanceCostButton);
             this.Controls.Add(this.enhancePictureBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.helpersLabel);
             this.Controls.Add(this.specialItemsLabel);
             this.Controls.Add(this.powerUpsLabel);
             this.Controls.Add(this.factoryImprovementsLabel);
@@ -499,6 +628,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.spacePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dayPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meteorPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.riderPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engineerPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minerPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,7 +654,7 @@
         private System.Windows.Forms.Label factoryImprovementsLabel;
         private System.Windows.Forms.Label powerUpsLabel;
         private System.Windows.Forms.Label specialItemsLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label helpersLabel;
         private System.Windows.Forms.PictureBox enhancePictureBox;
         private System.Windows.Forms.Button enhanceCostButton;
         private System.Windows.Forms.Label rocketNameLabel;
@@ -538,9 +670,19 @@
         private System.Windows.Forms.Label nightLabel;
         private System.Windows.Forms.Button effectCostbutton;
         private System.Windows.Forms.PictureBox meteorPictureBox1;
-        private System.Windows.Forms.Label fireMeteorLabel;
+        private System.Windows.Forms.Label meteorLabel;
         private System.Windows.Forms.Timer meteorTimer;
         private System.Windows.Forms.Timer meteorTimer1;
+        private System.Windows.Forms.PictureBox riderPictureBox;
+        private System.Windows.Forms.PictureBox engineerPictureBox;
+        private System.Windows.Forms.PictureBox minerPictureBox;
+        private System.Windows.Forms.Label minerLabel;
+        private System.Windows.Forms.Label engineerLabel;
+        private System.Windows.Forms.Label riderLabel;
+        private System.Windows.Forms.Button riderCostButton;
+        private System.Windows.Forms.Button minerCostButton;
+        private System.Windows.Forms.Button engineerCostButton;
+        private System.Windows.Forms.Timer passivePointTimer;
     }
 }
 

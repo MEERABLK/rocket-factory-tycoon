@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers.cs" />
     <Compile Include="RocketClickerGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +166,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Meteor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\militia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dwarven_scout_gray_hair_braided_beard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return_goods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gryphon_rider.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
