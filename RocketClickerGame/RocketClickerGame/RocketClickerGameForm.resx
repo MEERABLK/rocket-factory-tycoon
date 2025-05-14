@@ -131,8 +131,8 @@
   <data name="firePictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;engineerPictureBox.Name" xml:space="preserve">
-    <value>engineerPictureBox</value>
+  <data name="rocketNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>875, 406</value>
   </data>
   <data name="&gt;&gt;nightCostButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -210,6 +210,9 @@
   <data name="&gt;&gt;upgradesLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;spaceCostButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;rocketNameLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -228,6 +231,9 @@
   <data name="rocketButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>456, 163</value>
   </data>
+  <data name="&gt;&gt;rocketButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="riderPictureBox.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
@@ -239,9 +245,6 @@
   </data>
   <data name="spaceCostButton.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
-  </data>
-  <data name="meteorPictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
   </data>
   <data name="&gt;&gt;spaceCostButton.Parent" xml:space="preserve">
     <value>$this</value>
@@ -399,8 +402,8 @@
   <data name="spaceCostButton.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="rocketNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>875, 406</value>
+  <data name="languageComboBox.Items2" xml:space="preserve">
+    <value>Spanish</value>
   </data>
   <data name="languageComboBox.Items1" xml:space="preserve">
     <value>French</value>
@@ -504,8 +507,8 @@
   <data name="&gt;&gt;pointsLabel.Name" xml:space="preserve">
     <value>pointsLabel</value>
   </data>
-  <data name="nightLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
+  <data name="meteorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>860, 742</value>
   </data>
   <data name="&gt;&gt;flameTimer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -527,9 +530,6 @@
   </data>
   <data name="&gt;&gt;riderLabel.Name" xml:space="preserve">
     <value>riderLabel</value>
-  </data>
-  <data name="effectCostbutton.Text" xml:space="preserve">
-    <value>600 points</value>
   </data>
   <data name="&gt;&gt;riderPictureBox.Name" xml:space="preserve">
     <value>riderPictureBox</value>
@@ -599,6 +599,9 @@
   </data>
   <data name="spaceLabel.Text" xml:space="preserve">
     <value>Space</value>
+  </data>
+  <data name="&gt;&gt;engineerPictureBox.Name" xml:space="preserve">
+    <value>engineerPictureBox</value>
   </data>
   <data name="rocketButton1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -672,8 +675,8 @@
   <data name="enhanceCostButton.Text" xml:space="preserve">
     <value>300 points</value>
   </data>
-  <data name="languageComboBox.Items2" xml:space="preserve">
-    <value>Spanish</value>
+  <data name="&gt;&gt;enhancePictureBox.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="rocketEnhanceLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 48</value>
@@ -801,9 +804,6 @@
   <data name="languageComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="languageComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
   </data>
@@ -857,6 +857,9 @@
   </data>
   <data name="&gt;&gt;engineerPictureBox.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="&gt;&gt;fuelCostButton.Name" xml:space="preserve">
+    <value>fuelCostButton</value>
   </data>
   <data name="pointsLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>477, 9</value>
@@ -1029,9 +1032,6 @@
   <data name="engineerCostButton.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="meteorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>860, 742</value>
-  </data>
   <data name="&gt;&gt;speedLabel.Name" xml:space="preserve">
     <value>speedLabel</value>
   </data>
@@ -1116,8 +1116,8 @@
   <data name="&gt;&gt;languageComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;spaceCostButton.ZOrder" xml:space="preserve">
-    <value>16</value>
+  <data name="effectCostbutton.Text" xml:space="preserve">
+    <value>600 points</value>
   </data>
   <data name="engineerPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1155,6 +1155,9 @@
   <data name="&gt;&gt;riderCostButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;riderCostButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -1176,8 +1179,8 @@
   <data name="powerUpsLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="&gt;&gt;riderCostButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;spaceCostButton.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="factoryImprovementsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -1194,8 +1197,8 @@
   <data name="&gt;&gt;powerUpsLabel.Name" xml:space="preserve">
     <value>powerUpsLabel</value>
   </data>
-  <data name="&gt;&gt;fuelCostButton.Name" xml:space="preserve">
-    <value>fuelCostButton</value>
+  <data name="nightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
   </data>
   <data name="&gt;&gt;meteorTimer1.Name" xml:space="preserve">
     <value>meteorTimer1</value>
@@ -1212,8 +1215,8 @@
   <data name="&gt;&gt;fuelCostButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;rocketButton1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="meteorPictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
   </data>
   <data name="rocketEnhanceLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>1022, 335</value>
@@ -1281,11 +1284,8 @@
   <data name="riderLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;spaceCostButton.Type" xml:space="preserve">
+  <data name="&gt;&gt;settingsButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;enhancePictureBox.ZOrder" xml:space="preserve">
-    <value>26</value>
   </data>
   <data name="languageLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>955, 23</value>
@@ -1299,9 +1299,6 @@
   <data name="&gt;&gt;enhanceCostButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>fr-CA</value>
-  </metadata>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

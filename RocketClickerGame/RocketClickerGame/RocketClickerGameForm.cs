@@ -27,7 +27,7 @@ namespace RocketClickerGame
         int pointsPerClick = 1;
 
         // The player's points
-        private int points = 0;
+        private int points = 1000;
 
 
         //for play button
@@ -87,6 +87,15 @@ namespace RocketClickerGame
         private int currentFactoryIndex = 0;
 
 
+        //power ups
+        //using class for list storing objects
+        private List<PowerUps> powerUps= new List<PowerUps>();
+
+        //access list index
+        private int currentPowerIndex = 0;
+
+
+
         public RocketClickerGameForm()
         {
             InitializeComponent();
@@ -105,6 +114,7 @@ namespace RocketClickerGame
             addSpecialEffects();
             addHelpersToList();
             addFactoryUpgradeToList();
+            addPowerToList();
 
             riderCostButton.Enabled = false;
             engineerCostButton.Enabled = false;
@@ -783,10 +793,84 @@ namespace RocketClickerGame
             }
         }
 
-        private void pointsLabel_Click(object sender, EventArgs e)
+        //Factory improvements
+        //add ojects to list
+        private void addPowerToList()
         {
+            powerUps.Add(new PowerUps
+            {
+                Name = "Fuel",
+                Price = 50,
+                
+            });
 
+            powerUps.Add(new PowerUps
+            {
+                Name = "Speed",
+                Price = 100,
+                
+            });
+        }
+
+        //Power Ups
+        private void fuelCostButton_Click(object sender, EventArgs e)
+        {
+            //get the element from the list
+            var selected = powerUps[currentPowerIndex];
+
+            if (points >= selected.Price)
+            {
+                // Deduct points first
+                points -= selected.Price;
+
+                // Update UI immediately
+                pointsLabel.Text = "Points: " + points;
+
+                MessageBox.Show($"Purchased: {selected.Name}!");
+
+                // Increase pointsPerClick depending on which upgrade
+                if (currentEnhancementIndex == 0)
+                {
+                    pointsPerClick += 100; // First upgrade
+                } 
+                }
+            
+
+            else
+            {
+                MessageBox.Show("Not enough points!");
+            }
+        }
+
+        private void speedCostButton_Click(object sender, EventArgs e)
+        {
+            //get the element from the list
+            var selected = powerUps[1];
+
+            if (points >= selected.Price)
+            {
+                // Deduct points first
+                points -= selected.Price;
+
+                // Update UI immediately
+                pointsLabel.Text = "Points: " + points;
+
+                MessageBox.Show($"Purchased: {selected.Name}!");
+
+                // Increase pointsPerClick depending on which upgrade
+                if (currentEnhancementIndex == 0)
+                {
+                    pointsPerClick += 200; // First upgrade
+                }
+            }
+
+
+            else
+            {
+                MessageBox.Show("Not enough points!");
+            }
         }
     }
-}
+    }
+
 

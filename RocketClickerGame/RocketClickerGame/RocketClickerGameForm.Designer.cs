@@ -180,7 +180,6 @@
             this.pointsLabel.BackColor = System.Drawing.Color.Black;
             this.pointsLabel.ForeColor = System.Drawing.Color.White;
             this.pointsLabel.Name = "pointsLabel";
-            this.pointsLabel.Click += new System.EventHandler(this.pointsLabel_Click);
             // 
             // upgradesLabel
             // 
@@ -260,6 +259,7 @@
             this.fuelCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.fuelCostButton.Name = "fuelCostButton";
             this.fuelCostButton.UseVisualStyleBackColor = false;
+            this.fuelCostButton.Click += new System.EventHandler(this.fuelCostButton_Click);
             // 
             // speedLabel
             // 
@@ -274,6 +274,7 @@
             this.speedCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.speedCostButton.Name = "speedCostButton";
             this.speedCostButton.UseVisualStyleBackColor = false;
+            this.speedCostButton.Click += new System.EventHandler(this.speedCostButton_Click);
             // 
             // spacePictureBox
             // 

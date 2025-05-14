@@ -50,6 +50,7 @@
     <Compile Include="ChangeLanguage.cs" />
     <Compile Include="FactoryImprovements.cs" />
     <Compile Include="Helpers.cs" />
+    <Compile Include="PowerUps.cs" />
     <Compile Include="RocketClickerGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,9 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RocketClickerGameForm.es.resx">
+      <DependentUpon>RocketClickerGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RocketClickerGameForm.fr-CA.resx">
       <DependentUpon>RocketClickerGameForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +94,12 @@
     </Compile>
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.es.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.fr-CA.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>
