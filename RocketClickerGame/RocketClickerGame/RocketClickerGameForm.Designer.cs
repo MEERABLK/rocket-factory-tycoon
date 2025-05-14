@@ -161,6 +161,7 @@
             this.settingsButton.Size = new System.Drawing.Size(58, 61);
             this.settingsButton.TabIndex = 4;
             this.settingsButton.UseVisualStyleBackColor = false;
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // playButton
             // 

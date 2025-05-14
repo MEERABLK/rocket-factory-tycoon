@@ -39,11 +39,11 @@
             this.welcomeLabel.BackColor = System.Drawing.Color.Transparent;
             this.welcomeLabel.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.welcomeLabel.Location = new System.Drawing.Point(134, 28);
+            this.welcomeLabel.Location = new System.Drawing.Point(76, 31);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(397, 42);
+            this.welcomeLabel.Size = new System.Drawing.Size(497, 42);
             this.welcomeLabel.TabIndex = 7;
-            this.welcomeLabel.Text = " Welcome to Rocket Factory!";
+            this.welcomeLabel.Text = " Welcome to Rocket Factory Tycoon!";
             // 
             // subWelcomeLabel
             // 
@@ -53,9 +53,9 @@
             this.subWelcomeLabel.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.subWelcomeLabel.Location = new System.Drawing.Point(179, 85);
             this.subWelcomeLabel.Name = "subWelcomeLabel";
-            this.subWelcomeLabel.Size = new System.Drawing.Size(286, 29);
+            this.subWelcomeLabel.Size = new System.Drawing.Size(263, 29);
             this.subWelcomeLabel.TabIndex = 8;
-            this.subWelcomeLabel.Text = "Build, Upgrade, and Blast Off!";
+            this.subWelcomeLabel.Text = "Build, Collect, and Upgrade";
             // 
             // startButton
             // 
@@ -80,7 +80,7 @@
             this.Controls.Add(this.welcomeLabel);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StartForm";
+            this.Text = "Welcome To Rocket Factory ";
             this.ResumeLayout(false);
             this.PerformLayout();
 

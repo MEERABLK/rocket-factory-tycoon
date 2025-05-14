@@ -30,3 +30,4 @@ C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClicke
 C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.csproj.CoreCompileInputs.cache
 C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
 C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.SettingsForm.resources

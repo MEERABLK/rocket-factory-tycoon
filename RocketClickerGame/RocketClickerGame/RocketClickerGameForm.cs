@@ -752,6 +752,13 @@ namespace RocketClickerGame
 
             }
         }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            // Opens it as a window blocks the main form
+            settingsForm.ShowDialog(); 
+        }
     }
 }
 
