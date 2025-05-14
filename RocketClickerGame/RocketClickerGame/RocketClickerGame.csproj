@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeLanguage.cs" />
     <Compile Include="FactoryImprovements.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="RocketClickerGameForm.cs">
@@ -70,6 +72,9 @@
     <Compile Include="StartForm.Designer.cs">
       <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RocketClickerGameForm.fr-CA.resx">
+      <DependentUpon>RocketClickerGameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RocketClickerGameForm.resx">
       <DependentUpon>RocketClickerGameForm.cs</DependentUpon>
     </EmbeddedResource>

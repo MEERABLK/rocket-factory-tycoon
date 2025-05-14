@@ -31,3 +31,6 @@ C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClicke
 C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.exe
 C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.pdb
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.SettingsForm.resources
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\fr-CA\RocketClickerGame.resources.dll
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.RocketClickerGameForm.fr-CA.resources
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\fr-CA\RocketClickerGame.resources.dll
