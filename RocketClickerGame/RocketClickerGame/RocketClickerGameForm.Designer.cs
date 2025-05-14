@@ -180,6 +180,7 @@
             this.pointsLabel.BackColor = System.Drawing.Color.Black;
             this.pointsLabel.ForeColor = System.Drawing.Color.White;
             this.pointsLabel.Name = "pointsLabel";
+            this.pointsLabel.Click += new System.EventHandler(this.pointsLabel_Click);
             // 
             // upgradesLabel
             // 

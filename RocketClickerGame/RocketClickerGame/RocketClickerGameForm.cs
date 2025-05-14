@@ -782,6 +782,11 @@ namespace RocketClickerGame
                
             }
         }
+
+        private void pointsLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
