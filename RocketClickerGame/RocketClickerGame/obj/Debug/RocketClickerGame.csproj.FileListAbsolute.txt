@@ -54,3 +54,12 @@ C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debu
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\es\RocketClickerGame.resources.dll
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.fr-CA.resources
 C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.es.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\es\RocketClickerGame.resources.dll
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\bin\Debug\fr-CA\RocketClickerGame.resources.dll
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.SettingsForm.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.RocketClickerGameForm.es.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.RocketClickerGameForm.fr-CA.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.es.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.fr-CA.resources
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\es\RocketClickerGame.resources.dll
+C:\Users\meera\source\repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\fr-CA\RocketClickerGame.resources.dll

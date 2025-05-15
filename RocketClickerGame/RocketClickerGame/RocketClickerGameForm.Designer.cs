@@ -88,9 +88,9 @@
             // 
             // rocketButton1
             // 
-            resources.ApplyResources(this.rocketButton1, "rocketButton1");
             this.rocketButton1.BackColor = System.Drawing.Color.Transparent;
             this.rocketButton1.BackgroundImage = global::RocketClickerGame.Properties.Resources.conte_magnus_cc0_Rockets;
+            resources.ApplyResources(this.rocketButton1, "rocketButton1");
             this.rocketButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rocketButton1.FlatAppearance.BorderSize = 0;
             this.rocketButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -120,9 +120,9 @@
             // 
             // restartButton
             // 
-            resources.ApplyResources(this.restartButton, "restartButton");
             this.restartButton.BackColor = System.Drawing.Color.Transparent;
             this.restartButton.BackgroundImage = global::RocketClickerGame.Properties.Resources.Restart;
+            resources.ApplyResources(this.restartButton, "restartButton");
             this.restartButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.restartButton.FlatAppearance.BorderSize = 0;
             this.restartButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -133,9 +133,9 @@
             // 
             // settingsButton
             // 
-            resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.BackColor = System.Drawing.Color.Transparent;
             this.settingsButton.BackgroundImage = global::RocketClickerGame.Properties.Resources.Options;
+            resources.ApplyResources(this.settingsButton, "settingsButton");
             this.settingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.settingsButton.FlatAppearance.BorderSize = 0;
             this.settingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -146,9 +146,9 @@
             // 
             // playButton
             // 
-            resources.ApplyResources(this.playButton, "playButton");
             this.playButton.BackColor = System.Drawing.Color.Transparent;
             this.playButton.BackgroundImage = global::RocketClickerGame.Properties.Resources.Start;
+            resources.ApplyResources(this.playButton, "playButton");
             this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.playButton.FlatAppearance.BorderSize = 0;
             this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -163,9 +163,9 @@
             // 
             // firePictureBox
             // 
-            resources.ApplyResources(this.firePictureBox, "firePictureBox");
             this.firePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.firePictureBox.BackgroundImage = global::RocketClickerGame.Properties.Resources.fire1__01;
+            resources.ApplyResources(this.firePictureBox, "firePictureBox");
             this.firePictureBox.Image = global::RocketClickerGame.Properties.Resources.fire1__01;
             this.firePictureBox.Name = "firePictureBox";
             this.firePictureBox.TabStop = false;
@@ -183,58 +183,58 @@
             // 
             // upgradesLabel
             // 
-            resources.ApplyResources(this.upgradesLabel, "upgradesLabel");
             this.upgradesLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.upgradesLabel, "upgradesLabel");
             this.upgradesLabel.ForeColor = System.Drawing.Color.Aquamarine;
             this.upgradesLabel.Name = "upgradesLabel";
             // 
             // rocketEnhanceLabel
             // 
-            resources.ApplyResources(this.rocketEnhanceLabel, "rocketEnhanceLabel");
             this.rocketEnhanceLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.rocketEnhanceLabel, "rocketEnhanceLabel");
             this.rocketEnhanceLabel.ForeColor = System.Drawing.Color.Gold;
             this.rocketEnhanceLabel.Name = "rocketEnhanceLabel";
             // 
             // factoryImprovementsLabel
             // 
-            resources.ApplyResources(this.factoryImprovementsLabel, "factoryImprovementsLabel");
             this.factoryImprovementsLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.factoryImprovementsLabel, "factoryImprovementsLabel");
             this.factoryImprovementsLabel.ForeColor = System.Drawing.Color.Gold;
             this.factoryImprovementsLabel.Name = "factoryImprovementsLabel";
             // 
             // powerUpsLabel
             // 
-            resources.ApplyResources(this.powerUpsLabel, "powerUpsLabel");
             this.powerUpsLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.powerUpsLabel, "powerUpsLabel");
             this.powerUpsLabel.ForeColor = System.Drawing.Color.Gold;
             this.powerUpsLabel.Name = "powerUpsLabel";
             // 
             // specialItemsLabel
             // 
-            resources.ApplyResources(this.specialItemsLabel, "specialItemsLabel");
             this.specialItemsLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.specialItemsLabel, "specialItemsLabel");
             this.specialItemsLabel.ForeColor = System.Drawing.Color.Gold;
             this.specialItemsLabel.Name = "specialItemsLabel";
             // 
             // helpersLabel
             // 
-            resources.ApplyResources(this.helpersLabel, "helpersLabel");
             this.helpersLabel.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.helpersLabel, "helpersLabel");
             this.helpersLabel.ForeColor = System.Drawing.Color.Aquamarine;
             this.helpersLabel.Name = "helpersLabel";
             // 
             // enhancePictureBox
             // 
-            resources.ApplyResources(this.enhancePictureBox, "enhancePictureBox");
             this.enhancePictureBox.BackColor = System.Drawing.Color.LightSeaGreen;
             this.enhancePictureBox.Image = global::RocketClickerGame.Properties.Resources.smallfighter;
+            resources.ApplyResources(this.enhancePictureBox, "enhancePictureBox");
             this.enhancePictureBox.Name = "enhancePictureBox";
             this.enhancePictureBox.TabStop = false;
             // 
             // enhanceCostButton
             // 
-            resources.ApplyResources(this.enhanceCostButton, "enhanceCostButton");
             this.enhanceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.enhanceCostButton, "enhanceCostButton");
             this.enhanceCostButton.Name = "enhanceCostButton";
             this.enhanceCostButton.UseVisualStyleBackColor = false;
             this.enhanceCostButton.Click += new System.EventHandler(this.enhanceCostButton_Click);
@@ -255,8 +255,8 @@
             // 
             // fuelCostButton
             // 
-            resources.ApplyResources(this.fuelCostButton, "fuelCostButton");
             this.fuelCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.fuelCostButton, "fuelCostButton");
             this.fuelCostButton.Name = "fuelCostButton";
             this.fuelCostButton.UseVisualStyleBackColor = false;
             this.fuelCostButton.Click += new System.EventHandler(this.fuelCostButton_Click);
@@ -270,23 +270,23 @@
             // 
             // speedCostButton
             // 
-            resources.ApplyResources(this.speedCostButton, "speedCostButton");
             this.speedCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.speedCostButton, "speedCostButton");
             this.speedCostButton.Name = "speedCostButton";
             this.speedCostButton.UseVisualStyleBackColor = false;
             this.speedCostButton.Click += new System.EventHandler(this.speedCostButton_Click);
             // 
             // spacePictureBox
             // 
-            resources.ApplyResources(this.spacePictureBox, "spacePictureBox");
             this.spacePictureBox.Image = global::RocketClickerGame.Properties.Resources.Space_Background_1;
+            resources.ApplyResources(this.spacePictureBox, "spacePictureBox");
             this.spacePictureBox.Name = "spacePictureBox";
             this.spacePictureBox.TabStop = false;
             // 
             // dayPictureBox
             // 
-            resources.ApplyResources(this.dayPictureBox, "dayPictureBox");
             this.dayPictureBox.Image = global::RocketClickerGame.Properties.Resources.moonBackground;
+            resources.ApplyResources(this.dayPictureBox, "dayPictureBox");
             this.dayPictureBox.Name = "dayPictureBox";
             this.dayPictureBox.TabStop = false;
             // 
@@ -299,16 +299,16 @@
             // 
             // spaceCostButton
             // 
-            resources.ApplyResources(this.spaceCostButton, "spaceCostButton");
             this.spaceCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.spaceCostButton, "spaceCostButton");
             this.spaceCostButton.Name = "spaceCostButton";
             this.spaceCostButton.UseVisualStyleBackColor = false;
             this.spaceCostButton.Click += new System.EventHandler(this.spaceCostButton_Click);
             // 
             // nightCostButton
             // 
-            resources.ApplyResources(this.nightCostButton, "nightCostButton");
             this.nightCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.nightCostButton, "nightCostButton");
             this.nightCostButton.Name = "nightCostButton";
             this.nightCostButton.UseVisualStyleBackColor = false;
             this.nightCostButton.Click += new System.EventHandler(this.nightCostButton_Click);
@@ -322,16 +322,16 @@
             // 
             // effectCostbutton
             // 
-            resources.ApplyResources(this.effectCostbutton, "effectCostbutton");
             this.effectCostbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.effectCostbutton, "effectCostbutton");
             this.effectCostbutton.Name = "effectCostbutton";
             this.effectCostbutton.UseVisualStyleBackColor = false;
             this.effectCostbutton.Click += new System.EventHandler(this.effectCostbutton_Click);
             // 
             // meteorPictureBox1
             // 
-            resources.ApplyResources(this.meteorPictureBox1, "meteorPictureBox1");
             this.meteorPictureBox1.Image = global::RocketClickerGame.Properties.Resources.Meteor1;
+            resources.ApplyResources(this.meteorPictureBox1, "meteorPictureBox1");
             this.meteorPictureBox1.Name = "meteorPictureBox1";
             this.meteorPictureBox1.TabStop = false;
             // 
@@ -349,22 +349,22 @@
             // 
             // riderPictureBox
             // 
-            resources.ApplyResources(this.riderPictureBox, "riderPictureBox");
             this.riderPictureBox.Image = global::RocketClickerGame.Properties.Resources.gryphon_rider;
+            resources.ApplyResources(this.riderPictureBox, "riderPictureBox");
             this.riderPictureBox.Name = "riderPictureBox";
             this.riderPictureBox.TabStop = false;
             // 
             // engineerPictureBox
             // 
-            resources.ApplyResources(this.engineerPictureBox, "engineerPictureBox");
             this.engineerPictureBox.Image = global::RocketClickerGame.Properties.Resources.return_goods;
+            resources.ApplyResources(this.engineerPictureBox, "engineerPictureBox");
             this.engineerPictureBox.Name = "engineerPictureBox";
             this.engineerPictureBox.TabStop = false;
             // 
             // minerPictureBox
             // 
-            resources.ApplyResources(this.minerPictureBox, "minerPictureBox");
             this.minerPictureBox.Image = global::RocketClickerGame.Properties.Resources.dwarven_scout_gray_hair_braided_beard;
+            resources.ApplyResources(this.minerPictureBox, "minerPictureBox");
             this.minerPictureBox.Name = "minerPictureBox";
             this.minerPictureBox.TabStop = false;
             // 
@@ -391,24 +391,24 @@
             // 
             // riderCostButton
             // 
-            resources.ApplyResources(this.riderCostButton, "riderCostButton");
             this.riderCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.riderCostButton, "riderCostButton");
             this.riderCostButton.Name = "riderCostButton";
             this.riderCostButton.UseVisualStyleBackColor = false;
             this.riderCostButton.Click += new System.EventHandler(this.riderCostButton_Click);
             // 
             // minerCostButton
             // 
-            resources.ApplyResources(this.minerCostButton, "minerCostButton");
             this.minerCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.minerCostButton, "minerCostButton");
             this.minerCostButton.Name = "minerCostButton";
             this.minerCostButton.UseVisualStyleBackColor = false;
             this.minerCostButton.Click += new System.EventHandler(this.minerCostButton_Click);
             // 
             // engineerCostButton
             // 
-            resources.ApplyResources(this.engineerCostButton, "engineerCostButton");
             this.engineerCostButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.engineerCostButton, "engineerCostButton");
             this.engineerCostButton.Name = "engineerCostButton";
             this.engineerCostButton.UseVisualStyleBackColor = false;
             this.engineerCostButton.Click += new System.EventHandler(this.engineerCostButton_Click);
@@ -420,12 +420,12 @@
             // 
             // languageComboBox
             // 
-            resources.ApplyResources(this.languageComboBox, "languageComboBox");
             this.languageComboBox.FormattingEnabled = true;
             this.languageComboBox.Items.AddRange(new object[] {
             resources.GetString("languageComboBox.Items"),
             resources.GetString("languageComboBox.Items1"),
             resources.GetString("languageComboBox.Items2")});
+            resources.ApplyResources(this.languageComboBox, "languageComboBox");
             this.languageComboBox.Name = "languageComboBox";
             this.languageComboBox.SelectedIndexChanged += new System.EventHandler(this.languageComboBox_SelectedIndexChanged);
             // 

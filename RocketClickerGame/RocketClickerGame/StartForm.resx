@@ -117,115 +117,115 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="welcomeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="welcomeLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift SemiCondensed, 26.25pt</value>
-  </data>
-  <data name="welcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 31</value>
-  </data>
-  <data name="welcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>497, 42</value>
-  </data>
-  <data name="welcomeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="welcomeLabel.Text" xml:space="preserve">
-    <value> Welcome to Rocket Factory Tycoon!</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.Name" xml:space="preserve">
-    <value>welcomeLabel</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;welcomeLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="subWelcomeLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <data name="subWelcomeLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift SemiCondensed, 18pt</value>
   </data>
-  <data name="subWelcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 85</value>
-  </data>
-  <data name="subWelcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 29</value>
-  </data>
-  <data name="subWelcomeLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="subWelcomeLabel.Text" xml:space="preserve">
-    <value>Build, Collect, and Upgrade!</value>
-  </data>
-  <data name="&gt;&gt;subWelcomeLabel.Name" xml:space="preserve">
-    <value>subWelcomeLabel</value>
-  </data>
-  <data name="&gt;&gt;subWelcomeLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;subWelcomeLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;subWelcomeLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>637, 226</value>
   </data>
   <data name="startButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Stencil, 20.25pt</value>
+    <value>Microsoft Sans Serif, 20.25pt</value>
   </data>
-  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 146</value>
-  </data>
-  <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 49</value>
-  </data>
-  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="startButton.Text" xml:space="preserve">
-    <value>S T A R T</value>
-  </data>
-  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
-    <value>startButton</value>
-  </data>
-  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="subWelcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 85</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="subWelcomeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>637, 226</value>
+  <data name="startButton.Text" xml:space="preserve">
+    <value>S T A R T</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Welcome To Rocket Factory </value>
+  </data>
+  <data name="&gt;&gt;subWelcomeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Welcome To Rocket Factory </value>
-  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>StartForm</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="welcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 42</value>
   </data>
+  <data name="welcomeLabel.Text" xml:space="preserve">
+    <value> Welcome to Rocket Factory Tycoon!</value>
+  </data>
+  <data name="&gt;&gt;subWelcomeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>224, 146</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.Name" xml:space="preserve">
+    <value>welcomeLabel</value>
+  </data>
+  <data name="&gt;&gt;startButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;subWelcomeLabel.Name" xml:space="preserve">
+    <value>subWelcomeLabel</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="welcomeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="subWelcomeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;startButton.Name" xml:space="preserve">
+    <value>startButton</value>
+  </data>
+  <data name="startButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;startButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="welcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 31</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="welcomeLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift SemiCondensed, 26.25pt</value>
+  </data>
+  <data name="subWelcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 29</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="subWelcomeLabel.Text" xml:space="preserve">
+    <value>Build, Collect, and Upgrade!</value>
+  </data>
+  <data name="welcomeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 49</value>
+  </data>
+  <data name="&gt;&gt;welcomeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;subWelcomeLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

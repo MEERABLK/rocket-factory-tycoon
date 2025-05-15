@@ -133,8 +133,11 @@
   <data name="subWelcomeLabel.Text" xml:space="preserve">
     <value>Construisez, Collectionnez et Améliorez!</value>
   </data>
+  <data name="startButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 142</value>
+  </data>
   <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>241, 49</value>
+    <value>282, 49</value>
   </data>
   <data name="startButton.Text" xml:space="preserve">
     <value>C O M M E N C E R</value>

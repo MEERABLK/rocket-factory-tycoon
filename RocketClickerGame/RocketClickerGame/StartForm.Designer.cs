@@ -50,8 +50,8 @@
             // 
             // startButton
             // 
-            this.startButton.BackColor = System.Drawing.Color.DarkTurquoise;
             resources.ApplyResources(this.startButton, "startButton");
+            this.startButton.BackColor = System.Drawing.Color.DarkTurquoise;
             this.startButton.Name = "startButton";
             this.startButton.UseVisualStyleBackColor = false;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
