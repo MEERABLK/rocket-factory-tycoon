@@ -96,6 +96,7 @@
             this.MusicOn.TabStop = true;
             this.MusicOn.Text = "On";
             this.MusicOn.UseVisualStyleBackColor = false;
+            this.MusicOn.CheckedChanged += new System.EventHandler(this.MusicOn_CheckedChanged);
             // 
             // MusicOffButton
             // 
@@ -108,6 +109,7 @@
             this.MusicOffButton.TabStop = true;
             this.MusicOffButton.Text = "Off";
             this.MusicOffButton.UseVisualStyleBackColor = false;
+            this.MusicOffButton.CheckedChanged += new System.EventHandler(this.MusicOffButton_CheckedChanged);
             // 
             // MusicLabel
             // 

@@ -50,6 +50,7 @@
     <Compile Include="ChangeLanguage.cs" />
     <Compile Include="FactoryImprovements.cs" />
     <Compile Include="Helpers.cs" />
+    <Compile Include="PointConversion.cs" />
     <Compile Include="PowerUps.cs" />
     <Compile Include="RocketClickerGameForm.cs">
       <SubType>Form</SubType>

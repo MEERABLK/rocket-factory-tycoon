@@ -29,7 +29,6 @@ namespace RocketClickerGame
         // The player's points
         private int points = 0;
 
-
         //for play button
         private int originalX;
 
@@ -86,6 +85,8 @@ namespace RocketClickerGame
 
         private int currentFactoryIndex = 0;
 
+        // allows for editing the settings form from this form
+        private SettingsForm settingsForm;
 
         //power ups
         //using class for list storing objects
@@ -94,13 +95,17 @@ namespace RocketClickerGame
         //access list index
         private int currentPowerIndex = 0;
 
+        // for number display
+        public String numberDisplay { get; set; }
+        private PointConversion convert = new PointConversion();
+
 
 
         public RocketClickerGameForm()
         {
             InitializeComponent();
-
-
+            settingsForm = new SettingsForm(this);
+            numberDisplay = "SpokenNotation";
 
 
             // Disable rocket button until Play is clicked
@@ -176,12 +181,32 @@ namespace RocketClickerGame
             //the number of clicks increment at each click
             clicks++;
 
-
+            if (clicks == 100)
+            {
+                settingsForm.CompleteClickAchievement1();
+            }
+            if (clicks == 250)
+            {
+                settingsForm.CompleteClickAchievement2();
+            }
+            if (clicks == 1000)
+            {
+                settingsForm.CompleteClickAchievement3();
+            }
 
             points += pointsPerClick;
-
-            pointsLabel.Text = "Points: " + points;
-
+            switch (numberDisplay)
+            {
+                case "SpokenNotation":
+                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                    break;
+                case "ScientificNotation":
+                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                    break;
+                case "EngineeringNotation":
+                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                    break;
+            }
 
         }
 
@@ -195,7 +220,10 @@ namespace RocketClickerGame
             //displays the number of seconds
             timeLabel.Text = "Time: " + ticks;
 
-
+            if (ticks == 600)
+            {
+                settingsForm.CompletePlaytimeAchievement();
+            }
 
         }
 
@@ -355,8 +383,22 @@ namespace RocketClickerGame
                 // Deduct points first
                 points -= selected.Price;
 
+                // Complete the rocket achievement
+                settingsForm.CompleteRocketAchievement();
+
                 // Update UI immediately
-                pointsLabel.Text = "Points: " + points;
+                switch (numberDisplay)
+                {
+                    case "SpokenNotation":
+                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        break;
+                    case "ScientificNotation":
+                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        break;
+                    case "EngineeringNotation":
+                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        break;
+                }
 
                 MessageBox.Show($"Purchased: {selected.Name}!");
 
@@ -414,7 +456,20 @@ namespace RocketClickerGame
             {
                 points -= selectedEffect.Price;
 
-                pointsLabel.Text = "Points: " + points;
+                settingsForm.CompleteMeteorAchievement();
+
+                switch (numberDisplay)
+                {
+                    case "SpokenNotation":
+                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        break;
+                    case "ScientificNotation":
+                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        break;
+                    case "EngineeringNotation":
+                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        break;
+                }
 
                 MessageBox.Show("Meteor Shower Unlocked!");
 
@@ -604,7 +659,18 @@ namespace RocketClickerGame
                 {
                     points -= selected.Price;
                     passivePointsPerSecond += selected.PointsPerSecond;
-                    pointsLabel.Text = "Points: " + points;
+                    switch (numberDisplay)
+                    {
+                        case "SpokenNotation":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "ScientificNotation":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "EngineeringNotation":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                    }
                     MessageBox.Show($"{selected.Name} hired!");
 
                     StartPassivePointGeneration();
@@ -637,7 +703,18 @@ namespace RocketClickerGame
         private void passivePointTimer_Tick(object sender, EventArgs e)
         {
             points += passivePointsPerSecond;
-            pointsLabel.Text = "Points: " + points;
+            switch (numberDisplay)
+            {
+                case "SpokenNotation":
+                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                    break;
+                case "ScientificNotation":
+                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                    break;
+                case "EngineeringNotation":
+                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                    break;
+            }
         }
 
         private void engineerCostButton_Click(object sender, EventArgs e)
@@ -650,8 +727,20 @@ namespace RocketClickerGame
                 {
                     points -= selected.Price;
                     passivePointsPerSecond += selected.PointsPerSecond;
-                    pointsLabel.Text = "Points: " + points;
+                    switch (numberDisplay)
+                    {
+                        case "SpokenNotation":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "ScientificNotation":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "EngineeringNotation":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                    }
                     MessageBox.Show($"{selected.Name} hired!");
+                    settingsForm.CompleteEngineerAchievement();
 
                     StartPassivePointGeneration();
 
@@ -676,8 +765,20 @@ namespace RocketClickerGame
                 {
                     points -= selected.Price;
                     passivePointsPerSecond += selected.PointsPerSecond;
-                    pointsLabel.Text = "Points: " + points;
+                    switch (numberDisplay)
+                    {
+                        case "SpokenNotation":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "ScientificNotation":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "EngineeringNotation":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                    }
                     MessageBox.Show($"{selected.Name} hired!");
+                    settingsForm.CompleteMinerAchievement();
 
                     StartPassivePointGeneration();
                     //increase price
@@ -719,9 +820,21 @@ namespace RocketClickerGame
             {
                 points -= selected.Price;
 
-                pointsLabel.Text = "Points: " + points;
+                switch (numberDisplay)
+                {
+                    case "SpokenNotation":
+                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        break;
+                    case "ScientificNotation":
+                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        break;
+                    case "EngineeringNotation":
+                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        break;
+                }
 
                 MessageBox.Show("Welcome to Space!");
+                settingsForm.CompleteSpaceAchievement();
 
                 this.BackgroundImage = selected.Image;
                 this.BackgroundImageLayout = ImageLayout.Stretch;
@@ -746,9 +859,21 @@ namespace RocketClickerGame
                 {
                     points -= selected.Price;
 
-                    pointsLabel.Text = "Points: " + points;
+                    switch (numberDisplay)
+                    {
+                        case "SpokenNotation":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "ScientificNotation":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "EngineeringNotation":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                    }
 
                     MessageBox.Show("Moon Night!");
+                    settingsForm.CompleteNightSkyAchievement();
 
                     this.BackgroundImage = selected.Image;
                     this.BackgroundImageLayout = ImageLayout.Stretch;
@@ -767,7 +892,6 @@ namespace RocketClickerGame
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            SettingsForm settingsForm = new SettingsForm();
             // Opens it as a window blocks the main form
             settingsForm.ShowDialog(); 
         }
@@ -826,7 +950,18 @@ namespace RocketClickerGame
                 points -= selected.Price;
 
                 // Update UI immediately
-                pointsLabel.Text = "Points: " + points;
+                switch (numberDisplay)
+                {
+                    case "SpokenNotation":
+                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        break;
+                    case "ScientificNotation":
+                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        break;
+                    case "EngineeringNotation":
+                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        break;
+                }
 
                 MessageBox.Show($"Purchased: {selected.Name}!");
 
@@ -855,7 +990,18 @@ namespace RocketClickerGame
                 points -= selected.Price;
 
                 // Update UI immediately
-                pointsLabel.Text = "Points: " + points;
+                switch (numberDisplay)
+                {
+                    case "SpokenNotation":
+                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        break;
+                    case "ScientificNotation":
+                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        break;
+                    case "EngineeringNotation":
+                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        break;
+                }
 
                 MessageBox.Show($"Purchased: {selected.Name}!");
 
@@ -871,6 +1017,15 @@ namespace RocketClickerGame
             {
                 MessageBox.Show("Not enough points!");
             }
+        }
+
+        public void musicOn()
+        {
+            musicPlayer.PlayLooping();
+        }
+        public void musicOff()
+        {
+            musicPlayer.Stop();
         }
     }
     }
