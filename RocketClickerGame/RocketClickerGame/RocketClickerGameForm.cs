@@ -27,7 +27,7 @@ namespace RocketClickerGame
         int pointsPerClick = 1;
 
         // The player's points
-        private int points = 1000;
+        private int points = 0;
 
 
         //for play button
