@@ -235,6 +235,8 @@ namespace RocketClickerGame
 
                 passivePointTimer.Stop();
 
+
+                Application.Restart();
             }
         }
         private void playButton_Click(object sender, EventArgs e)
