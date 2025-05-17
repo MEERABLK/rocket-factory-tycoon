@@ -1,6 +1,8 @@
-﻿using System;
+﻿using RocketClickerGame.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -49,15 +51,12 @@ namespace RocketClickerGame
         //access list index
         private int flameFrameIndex = 0;
 
-
-
         //enhancements
         //using class for list storing objects
         private List<RocketEnhancement> rocketEnhancements = new List<RocketEnhancement>();
 
         //access list index
         private int currentEnhancementIndex = 0;
-
 
         //special items
         // list to store meteor PictureBoxes
@@ -69,19 +68,15 @@ namespace RocketClickerGame
         //if timer= 122 it counts +15 
         private int tickCount = 0;
 
-
         //helpers
         List<Helpers> helpers = new List<Helpers>();
        
-
         private int currentHelperIndex = 0;
 
         private int passivePointsPerSecond = 0;
 
-
         //factory improvements
         List<FactoryImprovements> factoryImprovements = new List<FactoryImprovements>();
-
 
         private int currentFactoryIndex = 0;
 
@@ -97,8 +92,10 @@ namespace RocketClickerGame
 
         // for number display
         public String numberDisplay { get; set; }
+
         private PointConversion convert = new PointConversion();
 
+        private string currentLanguage;
 
 
         public RocketClickerGameForm()
@@ -136,6 +133,10 @@ namespace RocketClickerGame
 
         private void RocketClickerGameForm_Load(object sender, EventArgs e)
         {
+
+            currentLanguage = ConfigurationManager.AppSettings["language"];
+
+
             addFrames();
             musicPlayer = new SoundPlayer(Properties.Resources.backgroundMusic);
             // Loops the music infinetely
@@ -174,12 +175,27 @@ namespace RocketClickerGame
             //rocket timer starts at click
             timer.Start();
 
-            // displays as int number of clicks
-            clicksLabel.Text = "Clicks: " + clicks;
+      
 
 
             //the number of clicks increment at each click
             clicks++;
+            // displays as int number of clicks
+            switch (currentLanguage)
+            {
+                case "en":
+                    clicksLabel.Text = "Clicks: " + clicks;
+                    break;
+                case "fr-CA":
+                    clicksLabel.Text = "Clics : " + clicks;
+                    break;
+                case "es":
+                    clicksLabel.Text = "Clics: " + clicks;
+                    break;
+                default:
+                    clicksLabel.Text = "Clicks: " + clicks;
+                    break;
+            }
 
             if (clicks == 100)
             {
@@ -198,15 +214,51 @@ namespace RocketClickerGame
             switch (numberDisplay)
             {
                 case "SpokenNotation":
-                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "fr-CA":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "es":
+                            pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                            break;
+                    }
                     break;
                 case "ScientificNotation":
-                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "fr-CA":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "es":
+                            pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                            break;
+                    }
                     break;
+
                 case "EngineeringNotation":
-                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                        case "fr-CA":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                        case "es":
+                            pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                            break;
+                    }
                     break;
             }
+
 
         }
 
@@ -218,8 +270,21 @@ namespace RocketClickerGame
             ticks++;
 
             //displays the number of seconds
-            timeLabel.Text = "Time: " + ticks;
-
+            switch (currentLanguage)
+            {
+                case "en":
+                    timeLabel.Text = "Time: " + ticks;
+                    break;
+                case "fr-CA":
+                    timeLabel.Text = "Temps : " + ticks;
+                    break;
+                case "es":
+                    timeLabel.Text = "Tiempo: " + ticks;
+                    break;
+                default:
+                    timeLabel.Text = "Time: " + ticks;
+                    break;
+            }
             if (ticks == 600)
             {
                 settingsForm.CompletePlaytimeAchievement();
@@ -341,18 +406,39 @@ namespace RocketClickerGame
         //add rocket image to list
         public void addToEnhanceList()
         {
+            currentLanguage = ConfigurationManager.AppSettings["language"];
+
+            string jetFighterName = "";
+            string spaceShuttleName = "";
+
+            switch (currentLanguage)
+            {
+                case "fr-CA":
+                    jetFighterName = "Chasseur à réaction";
+                    spaceShuttleName = "Navette spatiale";
+                    break;
+                case "es":
+                    jetFighterName = "Caza a reacción";
+                    spaceShuttleName = "Transbordador espacial";
+                    break;
+                default: // English
+                    jetFighterName = "Jet Fighter";
+                    spaceShuttleName = "Space Shuttle";
+                    break;
+            }
+
             rocketEnhancements.Add(new RocketEnhancement
             {
                 Image = Properties.Resources.smallfighter,
                 Price = 300,
-                Name = "Jet Fighter"
+                Name = jetFighterName
             });
 
             rocketEnhancements.Add(new RocketEnhancement
             {
                 Image = Properties.Resources.spaceShuttle1,
                 Price = 550,
-                Name = "Space Shuttle"
+                Name = spaceShuttleName
             });
         }
 
@@ -369,7 +455,22 @@ namespace RocketClickerGame
 
             enhancePictureBox.Image = current.Image;
             rocketNameLabel.Text = $"{current.Name}";
-            enhanceCostButton.Text = $" {current.Price}" + " points";
+
+            switch (currentLanguage)
+            {
+                case "en":
+                    enhanceCostButton.Text = $" {current.Price}" + " points"; 
+                    break;
+                case "fr-CA":
+                    enhanceCostButton.Text = $" {current.Price}" + " points";
+                    break;
+                case "es":
+                    enhanceCostButton.Text = $" {current.Price}" + " puntos";
+                    break;
+                default:
+                    enhanceCostButton.Text = $" {current.Price}" + " points";
+                    break;
+            }
         }
 
         //change rocket image and deduct points
@@ -390,17 +491,64 @@ namespace RocketClickerGame
                 switch (numberDisplay)
                 {
                     case "SpokenNotation":
-                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                break;
+                        }
                         break;
                     case "ScientificNotation":
-                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
-                        break;
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                break;
+                        }
+                                break;
+                      
                     case "EngineeringNotation":
-                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                break;
+                        }
                         break;
                 }
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show($"Purchased: {selected.Name}!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show($"Acheté: {selected.Name}!");
+                        break;
+                    case "es":
+                        MessageBox.Show($"Comprado: {selected.Name}!");
 
-                MessageBox.Show($"Purchased: {selected.Name}!");
+                        break;
+                        
+                }
 
                 // Increase pointsPerClick depending on which upgrade
                 if (currentEnhancementIndex == 0)
@@ -426,13 +574,39 @@ namespace RocketClickerGame
                 {
                     // Last enhancement reached, disable buy button
                     enhanceCostButton.Enabled = false;
-                    MessageBox.Show("You have bought all upgrades!");
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("You have bought all rockets!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Vous avez acheté tous les fusées!");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡Has comprado todos los cohetes!");
+
+                            break;
+
+                    }
                 }
             }
 
             else
             {
-                MessageBox.Show("Not enough points!");
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Not enough points!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Pas assez de points!");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡No tienes suficientes puntos!");
+
+                        break;
+
+                }
             }
         }
 

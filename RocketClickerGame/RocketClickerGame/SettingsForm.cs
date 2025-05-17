@@ -19,10 +19,7 @@ namespace RocketClickerGame
             this.gameForm = gameForm;
         }
 
-        private void SettingsForm_Load(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void NumberSettingComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -85,20 +82,7 @@ namespace RocketClickerGame
             SpaceAchievementLabel.BackColor = Color.Green;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AchievementLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Achievement1Label_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void MusicOn_CheckedChanged(object sender, EventArgs e)
         {

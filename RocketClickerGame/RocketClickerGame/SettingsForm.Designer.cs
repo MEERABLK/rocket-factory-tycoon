@@ -72,7 +72,7 @@
             resources.ApplyResources(this.NumberLabel, "NumberLabel");
             this.NumberLabel.BackColor = System.Drawing.Color.Transparent;
             this.NumberLabel.Name = "NumberLabel";
-            this.NumberLabel.Click += new System.EventHandler(this.label2_Click);
+          //  this.NumberLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // MusicOn
             // 
@@ -103,7 +103,7 @@
             resources.ApplyResources(this.AchievementLabel, "AchievementLabel");
             this.AchievementLabel.BackColor = System.Drawing.Color.Transparent;
             this.AchievementLabel.Name = "AchievementLabel";
-            this.AchievementLabel.Click += new System.EventHandler(this.AchievementLabel_Click);
+//            this.AchievementLabel.Click += new System.EventHandler(this.AchievementLabel_Click);
             // 
             // MinerAchievementLabel
             // 
@@ -111,7 +111,7 @@
             this.MinerAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.MinerAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MinerAchievementLabel.Name = "MinerAchievementLabel";
-            this.MinerAchievementLabel.Click += new System.EventHandler(this.Achievement1Label_Click);
+//            this.MinerAchievementLabel.Click += new System.EventHandler(this.Achievement1Label_Click);
             // 
             // EngineerAchievementLabel
             // 
@@ -207,7 +207,7 @@
             this.Controls.Add(this.NumberSettingComboBox);
             this.Controls.Add(this.settingsLabel);
             this.Name = "SettingsForm";
-            this.Load += new System.EventHandler(this.SettingsForm_Load);
+//            this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
