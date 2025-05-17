@@ -68,3 +68,5 @@ C:\Users\fuzzy\Source\Repos\rocket-factory-tycoon\RocketClickerGame\RocketClicke
 C:\Users\fuzzy\Source\Repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.es.resources
 C:\Users\fuzzy\Source\Repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.StartForm.fr-CA.resources
 C:\Users\fuzzy\Source\Repos\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\es\RocketClickerGame.resources.dll
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.SettingsForm.fr-CA.resources
+C:\Users\user\rocket-factory-tycoon\RocketClickerGame\RocketClickerGame\obj\Debug\RocketClickerGame.SettingsForm.es.resources

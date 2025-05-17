@@ -271,7 +271,7 @@
     <value>Flat</value>
   </data>
   <data name="playButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>720, 9</value>
+    <value>826, 76</value>
   </data>
   <data name="playButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 61</value>

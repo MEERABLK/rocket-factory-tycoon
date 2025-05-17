@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.settingsLabel = new System.Windows.Forms.Label();
             this.NumberSettingComboBox = new System.Windows.Forms.ComboBox();
             this.NumberLabel = new System.Windows.Forms.Label();
@@ -50,229 +51,143 @@
             // 
             // settingsLabel
             // 
-            this.settingsLabel.AutoSize = true;
+            resources.ApplyResources(this.settingsLabel, "settingsLabel");
             this.settingsLabel.BackColor = System.Drawing.Color.Transparent;
-            this.settingsLabel.Font = new System.Drawing.Font("Cooper Black", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsLabel.ForeColor = System.Drawing.Color.Black;
-            this.settingsLabel.Location = new System.Drawing.Point(296, 38);
             this.settingsLabel.Name = "settingsLabel";
-            this.settingsLabel.Size = new System.Drawing.Size(208, 40);
-            this.settingsLabel.TabIndex = 8;
-            this.settingsLabel.Text = "SETTINGS";
             // 
             // NumberSettingComboBox
             // 
+            resources.ApplyResources(this.NumberSettingComboBox, "NumberSettingComboBox");
             this.NumberSettingComboBox.FormattingEnabled = true;
             this.NumberSettingComboBox.Items.AddRange(new object[] {
-            "Spoken Notation",
-            "Scientific Notation",
-            "Engineering Notation"});
-            this.NumberSettingComboBox.Location = new System.Drawing.Point(124, 130);
+            resources.GetString("NumberSettingComboBox.Items"),
+            resources.GetString("NumberSettingComboBox.Items1"),
+            resources.GetString("NumberSettingComboBox.Items2")});
             this.NumberSettingComboBox.Name = "NumberSettingComboBox";
-            this.NumberSettingComboBox.Size = new System.Drawing.Size(141, 21);
-            this.NumberSettingComboBox.TabIndex = 9;
             this.NumberSettingComboBox.SelectedIndexChanged += new System.EventHandler(this.NumberSettingComboBox_SelectedIndexChanged);
             // 
             // NumberLabel
             // 
-            this.NumberLabel.AutoSize = true;
+            resources.ApplyResources(this.NumberLabel, "NumberLabel");
             this.NumberLabel.BackColor = System.Drawing.Color.Transparent;
-            this.NumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumberLabel.Location = new System.Drawing.Point(120, 107);
             this.NumberLabel.Name = "NumberLabel";
-            this.NumberLabel.Size = new System.Drawing.Size(120, 20);
-            this.NumberLabel.TabIndex = 11;
-            this.NumberLabel.Text = "Number Format";
             this.NumberLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // MusicOn
             // 
-            this.MusicOn.AutoSize = true;
+            resources.ApplyResources(this.MusicOn, "MusicOn");
             this.MusicOn.BackColor = System.Drawing.Color.Transparent;
-            this.MusicOn.Location = new System.Drawing.Point(124, 186);
             this.MusicOn.Name = "MusicOn";
-            this.MusicOn.Size = new System.Drawing.Size(39, 17);
-            this.MusicOn.TabIndex = 12;
             this.MusicOn.TabStop = true;
-            this.MusicOn.Text = "On";
             this.MusicOn.UseVisualStyleBackColor = false;
             this.MusicOn.CheckedChanged += new System.EventHandler(this.MusicOn_CheckedChanged);
             // 
             // MusicOffButton
             // 
-            this.MusicOffButton.AutoSize = true;
+            resources.ApplyResources(this.MusicOffButton, "MusicOffButton");
             this.MusicOffButton.BackColor = System.Drawing.Color.Transparent;
-            this.MusicOffButton.Location = new System.Drawing.Point(124, 204);
             this.MusicOffButton.Name = "MusicOffButton";
-            this.MusicOffButton.Size = new System.Drawing.Size(39, 17);
-            this.MusicOffButton.TabIndex = 13;
             this.MusicOffButton.TabStop = true;
-            this.MusicOffButton.Text = "Off";
             this.MusicOffButton.UseVisualStyleBackColor = false;
             this.MusicOffButton.CheckedChanged += new System.EventHandler(this.MusicOffButton_CheckedChanged);
             // 
             // MusicLabel
             // 
-            this.MusicLabel.AutoSize = true;
+            resources.ApplyResources(this.MusicLabel, "MusicLabel");
             this.MusicLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MusicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MusicLabel.Location = new System.Drawing.Point(120, 163);
             this.MusicLabel.Name = "MusicLabel";
-            this.MusicLabel.Size = new System.Drawing.Size(50, 20);
-            this.MusicLabel.TabIndex = 15;
-            this.MusicLabel.Text = "Music";
             // 
             // AchievementLabel
             // 
-            this.AchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.AchievementLabel, "AchievementLabel");
             this.AchievementLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AchievementLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AchievementLabel.Location = new System.Drawing.Point(503, 99);
             this.AchievementLabel.Name = "AchievementLabel";
-            this.AchievementLabel.Size = new System.Drawing.Size(175, 29);
-            this.AchievementLabel.TabIndex = 16;
-            this.AchievementLabel.Text = "Achievements";
             this.AchievementLabel.Click += new System.EventHandler(this.AchievementLabel_Click);
             // 
             // MinerAchievementLabel
             // 
-            this.MinerAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.MinerAchievementLabel, "MinerAchievementLabel");
             this.MinerAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.MinerAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MinerAchievementLabel.Location = new System.Drawing.Point(503, 136);
             this.MinerAchievementLabel.Name = "MinerAchievementLabel";
-            this.MinerAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 54, 6);
-            this.MinerAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.MinerAchievementLabel.TabIndex = 17;
-            this.MinerAchievementLabel.Text = "Buy a miner";
             this.MinerAchievementLabel.Click += new System.EventHandler(this.Achievement1Label_Click);
             // 
             // EngineerAchievementLabel
             // 
-            this.EngineerAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.EngineerAchievementLabel, "EngineerAchievementLabel");
             this.EngineerAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.EngineerAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EngineerAchievementLabel.Location = new System.Drawing.Point(503, 164);
             this.EngineerAchievementLabel.Name = "EngineerAchievementLabel";
-            this.EngineerAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 32, 6);
-            this.EngineerAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.EngineerAchievementLabel.TabIndex = 18;
-            this.EngineerAchievementLabel.Text = "Buy an engineer";
             // 
             // RiderAchievementLabel
             // 
-            this.RiderAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.RiderAchievementLabel, "RiderAchievementLabel");
             this.RiderAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.RiderAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RiderAchievementLabel.Location = new System.Drawing.Point(503, 192);
             this.RiderAchievementLabel.Name = "RiderAchievementLabel";
-            this.RiderAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 59, 6);
-            this.RiderAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.RiderAchievementLabel.TabIndex = 19;
-            this.RiderAchievementLabel.Text = "Buy a rider";
             // 
             // ClickAchievementLabel1
             // 
-            this.ClickAchievementLabel1.AutoSize = true;
+            resources.ApplyResources(this.ClickAchievementLabel1, "ClickAchievementLabel1");
             this.ClickAchievementLabel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClickAchievementLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClickAchievementLabel1.Location = new System.Drawing.Point(503, 220);
             this.ClickAchievementLabel1.Name = "ClickAchievementLabel1";
-            this.ClickAchievementLabel1.Padding = new System.Windows.Forms.Padding(54, 6, 38, 6);
-            this.ClickAchievementLabel1.Size = new System.Drawing.Size(172, 27);
-            this.ClickAchievementLabel1.TabIndex = 20;
-            this.ClickAchievementLabel1.Text = "Click 100 times";
             // 
             // ClickAchievementLabel2
             // 
-            this.ClickAchievementLabel2.AutoSize = true;
+            resources.ApplyResources(this.ClickAchievementLabel2, "ClickAchievementLabel2");
             this.ClickAchievementLabel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClickAchievementLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClickAchievementLabel2.Location = new System.Drawing.Point(503, 248);
             this.ClickAchievementLabel2.Name = "ClickAchievementLabel2";
-            this.ClickAchievementLabel2.Padding = new System.Windows.Forms.Padding(54, 6, 38, 6);
-            this.ClickAchievementLabel2.Size = new System.Drawing.Size(172, 27);
-            this.ClickAchievementLabel2.TabIndex = 21;
-            this.ClickAchievementLabel2.Text = "Click 250 times";
             // 
             // SpaceAchievementLabel
             // 
-            this.SpaceAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.SpaceAchievementLabel, "SpaceAchievementLabel");
             this.SpaceAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.SpaceAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SpaceAchievementLabel.Location = new System.Drawing.Point(503, 416);
             this.SpaceAchievementLabel.Name = "SpaceAchievementLabel";
-            this.SpaceAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 38, 6);
-            this.SpaceAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.SpaceAchievementLabel.TabIndex = 22;
-            this.SpaceAchievementLabel.Text = "Move to space";
             // 
             // NightSkyAchievementLabel
             // 
-            this.NightSkyAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.NightSkyAchievementLabel, "NightSkyAchievementLabel");
             this.NightSkyAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.NightSkyAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NightSkyAchievementLabel.Location = new System.Drawing.Point(503, 388);
             this.NightSkyAchievementLabel.Name = "NightSkyAchievementLabel";
-            this.NightSkyAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 7, 6);
-            this.NightSkyAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.NightSkyAchievementLabel.TabIndex = 23;
-            this.NightSkyAchievementLabel.Text = "Move to the night sky";
             // 
             // MeteorAchievementLabel
             // 
-            this.MeteorAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.MeteorAchievementLabel, "MeteorAchievementLabel");
             this.MeteorAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.MeteorAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MeteorAchievementLabel.Location = new System.Drawing.Point(503, 332);
             this.MeteorAchievementLabel.Name = "MeteorAchievementLabel";
-            this.MeteorAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 6, 6);
-            this.MeteorAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.MeteorAchievementLabel.TabIndex = 24;
-            this.MeteorAchievementLabel.Text = "Start a meteor shower";
             // 
             // PlayTimeAchievementLabel
             // 
-            this.PlayTimeAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.PlayTimeAchievementLabel, "PlayTimeAchievementLabel");
             this.PlayTimeAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.PlayTimeAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PlayTimeAchievementLabel.Location = new System.Drawing.Point(503, 360);
             this.PlayTimeAchievementLabel.Name = "PlayTimeAchievementLabel";
-            this.PlayTimeAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 20, 6);
-            this.PlayTimeAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.PlayTimeAchievementLabel.TabIndex = 25;
-            this.PlayTimeAchievementLabel.Text = "Play for 10 minutes";
             // 
             // NewRocketAchievementLabel
             // 
-            this.NewRocketAchievementLabel.AutoSize = true;
+            resources.ApplyResources(this.NewRocketAchievementLabel, "NewRocketAchievementLabel");
             this.NewRocketAchievementLabel.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.NewRocketAchievementLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NewRocketAchievementLabel.Location = new System.Drawing.Point(503, 304);
             this.NewRocketAchievementLabel.Name = "NewRocketAchievementLabel";
-            this.NewRocketAchievementLabel.Padding = new System.Windows.Forms.Padding(54, 6, 26, 6);
-            this.NewRocketAchievementLabel.Size = new System.Drawing.Size(172, 27);
-            this.NewRocketAchievementLabel.TabIndex = 26;
-            this.NewRocketAchievementLabel.Text = "Buy a new rocket";
             // 
             // ClickAchievementLabel3
             // 
-            this.ClickAchievementLabel3.AutoSize = true;
+            resources.ApplyResources(this.ClickAchievementLabel3, "ClickAchievementLabel3");
             this.ClickAchievementLabel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClickAchievementLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ClickAchievementLabel3.Location = new System.Drawing.Point(503, 276);
             this.ClickAchievementLabel3.Name = "ClickAchievementLabel3";
-            this.ClickAchievementLabel3.Padding = new System.Windows.Forms.Padding(54, 6, 32, 6);
-            this.ClickAchievementLabel3.Size = new System.Drawing.Size(172, 27);
-            this.ClickAchievementLabel3.TabIndex = 27;
-            this.ClickAchievementLabel3.Text = "Click 1000 times";
             // 
             // SettingsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RocketClickerGame.Properties.Resources.paper_background;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ClickAchievementLabel3);
             this.Controls.Add(this.NewRocketAchievementLabel);
             this.Controls.Add(this.PlayTimeAchievementLabel);
@@ -292,7 +207,6 @@
             this.Controls.Add(this.NumberSettingComboBox);
             this.Controls.Add(this.settingsLabel);
             this.Name = "SettingsForm";
-            this.Text = "Settings";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
