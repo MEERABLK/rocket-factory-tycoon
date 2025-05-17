@@ -422,6 +422,12 @@ namespace RocketClickerGame
                     currentEnhancementIndex++;
                     ShowCurrentEnhancement();
                 }
+                else
+                {
+                    // Last enhancement reached, disable buy button
+                    enhanceCostButton.Enabled = false;
+                    MessageBox.Show("You have bought all upgrades!");
+                }
             }
 
             else
