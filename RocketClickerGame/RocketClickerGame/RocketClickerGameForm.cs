@@ -100,7 +100,9 @@ namespace RocketClickerGame
 
         public RocketClickerGameForm()
         {
+
             InitializeComponent();
+
             settingsForm = new SettingsForm(this);
             numberDisplay = "SpokenNotation";
 
@@ -135,7 +137,6 @@ namespace RocketClickerGame
         {
 
             currentLanguage = ConfigurationManager.AppSettings["language"];
-
 
             addFrames();
             musicPlayer = new SoundPlayer(Properties.Resources.backgroundMusic);
@@ -295,11 +296,27 @@ namespace RocketClickerGame
         //to restart the game
         private void restartButton_Click(object sender, EventArgs e)
         {
-            var choice = MessageBox.Show("Are you sure you want to restart the game?",
+            DialogResult choice = DialogResult.No; // Default value
+
+            switch (currentLanguage)
+            {
+                case "en":
+                     choice = MessageBox.Show("Are you sure you want to restart the game?",
                                          "Confirm Restart",
-                                         MessageBoxButtons.YesNo);
+                                         MessageBoxButtons.YesNo); 
+                    break;
+                case "fr-CA":
+                    choice = MessageBox.Show("Êtes-vous sûr de vouloir redémarrer le jeu ?",
+                                             "Confirmer le redémarrage",
+                                             MessageBoxButtons.YesNo); 
+                    break;
+                case "es":
+                    choice = MessageBox.Show("¿Estás seguro de que quieres reiniciar el juego?",
+                          "Confirmar reinicio",
+                          MessageBoxButtons.YesNo);
+                    break;
 
-
+            }
             if (choice == DialogResult.Yes)
             {
                 playButtonTimer.Start();
@@ -599,7 +616,7 @@ namespace RocketClickerGame
                         MessageBox.Show("Not enough points!");
                         break;
                     case "fr-CA":
-                        MessageBox.Show("Pas assez de points!");
+                        MessageBox.Show("Points insuffisant!");
                         break;
                     case "es":
                         MessageBox.Show("¡No tienes suficientes puntos!");
@@ -615,13 +632,30 @@ namespace RocketClickerGame
         //add special effet image name price to list
         private void addSpecialEffects()
         {
-            specialEffects.Add(new SpecialEffects
+            currentLanguage = ConfigurationManager.AppSettings["language"];
+
+            string specialEffectsName = "";
+
+            switch (currentLanguage)
+            {
+                case "fr-CA":
+                    specialEffectsName = "Pluie de feu de 15s";
+                    break;
+                case "es":
+                    specialEffectsName = "Lluvia de fuego de 15s";
+                    break;
+                default: // English
+                    specialEffectsName = "15s Fire Shower";
+                    break;
+            }
+
+        specialEffects.Add(new SpecialEffects
             {
                 MeteorImage = Properties.Resources.Meteor1,
                 Price = 600,
-                Name = "15s Fire Shower"
+                Name = specialEffectsName
 
-            });
+        });
 
 
         }
@@ -641,17 +675,64 @@ namespace RocketClickerGame
                 switch (numberDisplay)
                 {
                     case "SpokenNotation":
-                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                break;
+                        }
                         break;
                     case "ScientificNotation":
-                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                break;
+                        }
                         break;
+
                     case "EngineeringNotation":
-                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                break;
+                        }
                         break;
                 }
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Meteor Shower Unlocked!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Pluie de météores débloquée !");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡Lluvia de meteoritos desbloqueada!");
 
-                MessageBox.Show("Meteor Shower Unlocked!");
+                        break;
+
+                }
 
                 // Increase pointsPerClick depending on which upgrade
                 if (currentEffectIndex == 0)
@@ -665,7 +746,20 @@ namespace RocketClickerGame
             }
             else
             {
-                MessageBox.Show("Not enough points!");
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Not enough points!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Points insuffisant!");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡No tienes suficientes puntos!");
+
+                        break;
+
+                }
             }
         }
 
@@ -702,7 +796,21 @@ namespace RocketClickerGame
             if (tickCount >= 15)
             {
                 meteorTimer1.Stop();
-                MessageBox.Show("Meteor Shower Ended!");
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Meteor Shower Ended!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("La pluie de météores est terminée !");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡La lluvia de meteoritos ha terminado!");
+
+                        break;
+
+                }
+               
                 return;
             }
 
@@ -803,9 +911,34 @@ namespace RocketClickerGame
         //add ojects to list
         private void addHelpersToList()
         {
+            currentLanguage = ConfigurationManager.AppSettings["language"];
+
+            string riderName = "";
+            string engineerName = "";
+            string minerName = "";
+
+            switch (currentLanguage)
+            {
+                case "fr-CA":
+                    riderName = "Cavalier";
+                    engineerName = "Ingénieur";
+                    minerName = "Mineur";
+                    break;
+                case "es":
+                    riderName = "Jinete";
+                    engineerName = "Ingeniero";
+                    minerName = "Minero";
+                    break;
+                default: // English
+                    riderName = "Rider";
+                    engineerName = "Engineer";
+                    minerName = "Miner";
+                    break;
+            }
+
             helpers.Add(new Helpers
             {
-                Name = "Rider",
+                Name = riderName,
                 Price = 220,
                 PointsPerSecond = 10,
                 Image = Properties.Resources.gryphon_rider
@@ -813,7 +946,7 @@ namespace RocketClickerGame
 
             helpers.Add(new Helpers
             {
-                Name = "Engineer",
+                Name = engineerName,
                 Price = 500,
                 PointsPerSecond = 5,
                 Image = Properties.Resources.return_goods
@@ -821,7 +954,7 @@ namespace RocketClickerGame
 
             helpers.Add(new Helpers
             {
-                Name = "Miner",
+                Name = minerName,
                 Price = 50,
                 PointsPerSecond = 2,
                 Image = Properties.Resources.dwarven_scout_gray_hair_braided_beard
@@ -833,35 +966,111 @@ namespace RocketClickerGame
             // Use current index or manually assign Rider index (0)
             var selected = helpers[currentHelperIndex];
 
-            if (selected.Name == "Rider")
+            if (selected.Name == "Rider"|| selected.Name == "Cavalier"|| selected.Name == "Jinete")
             {
                 if (points >= selected.Price)
                 {
                     points -= selected.Price;
                     passivePointsPerSecond += selected.PointsPerSecond;
+
                     switch (numberDisplay)
                     {
                         case "SpokenNotation":
-                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                    break;
+                            }
                             break;
                         case "ScientificNotation":
-                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                    break;
+                            }
                             break;
+
                         case "EngineeringNotation":
-                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                    break;
+                            }
                             break;
                     }
-                    MessageBox.Show($"{selected.Name} hired!");
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show($"{selected.Name} hired!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show($"{selected.Name} embauché(e) !");
+                            break;
+                        case "es":
+                            MessageBox.Show($"{selected.Name} contratado!");
+
+                            break;
+
+                    }
 
                     StartPassivePointGeneration();
 
                     // Increase price and update button
                     selected.Price = (int)(selected.Price * 1.25);
-                    riderCostButton.Text = $"{selected.Price} points";
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            riderCostButton.Text = $"{selected.Price} points";
+                            break;
+                        case "fr-CA":
+                            riderCostButton.Text = $"{selected.Price} points";
+                            break;
+                        case "es":
+                            riderCostButton.Text = $"{selected.Price} puntos";
+
+                            break;
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Not enough points!");
+
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("Not enough points!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Points insuffisant!");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡No tienes suficientes puntos!");
+
+                            break;
+
+                    }
                 }
             }
         
@@ -886,22 +1095,57 @@ namespace RocketClickerGame
             switch (numberDisplay)
             {
                 case "SpokenNotation":
-                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "fr-CA":
+                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            break;
+                        case "es":
+                            pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                            break;
+                    }
                     break;
                 case "ScientificNotation":
-                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "fr-CA":
+                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            break;
+                        case "es":
+                            pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                            break;
+                    }
                     break;
+
                 case "EngineeringNotation":
-                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                        case "fr-CA":
+                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            break;
+                        case "es":
+                            pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                            break;
+                    }
                     break;
             }
-        }
+            }
 
         private void engineerCostButton_Click(object sender, EventArgs e)
         {
             var selected = helpers[1]; // Engineer is at index 1
 
-            if (selected.Name == "Engineer")
+            if (selected.Name == "Engineer"|| selected.Name == "Ingénieur" || selected.Name == "Ingeniero")
             {
                 if (points >= selected.Price)
                 {
@@ -910,26 +1154,102 @@ namespace RocketClickerGame
                     switch (numberDisplay)
                     {
                         case "SpokenNotation":
-                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                    break;
+                            }
                             break;
                         case "ScientificNotation":
-                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                    break;
+                            }
                             break;
+
                         case "EngineeringNotation":
-                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                    break;
+                            }
                             break;
                     }
-                    MessageBox.Show($"{selected.Name} hired!");
+
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show($"{selected.Name} hired!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show($"{selected.Name} embauché(e) !");
+                            break;
+                        case "es":
+                            MessageBox.Show($"{selected.Name} contratado!");
+
+                            break;
+
+                    }
                     settingsForm.CompleteEngineerAchievement();
 
                     StartPassivePointGeneration();
 
                     selected.Price = (int)(selected.Price * 1.25);
-                    engineerCostButton.Text = $"{selected.Price} points";
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            engineerCostButton.Text = $"{selected.Price} points";
+                            break;
+                        case "fr-CA":
+                            engineerCostButton.Text = $"{selected.Price} points";
+                            break;
+                        case "es":
+                            engineerCostButton.Text = $"{selected.Price} puntos";
+
+                            break;
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Not enough points!");
+
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("Not enough points!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Points insuffisant!");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡No tienes suficientes puntos!");
+
+                            break;
+
+                    }
                 }
             }
         }
@@ -937,9 +1257,9 @@ namespace RocketClickerGame
         private void minerCostButton_Click(object sender, EventArgs e)
         {
             // Miner is at index 2
-            var selected = helpers[2]; 
-
-            if (selected.Name == "Miner")
+            var selected = helpers[2];
+             
+                if (selected.Name == "Miner" || selected.Name == "Mineur" || selected.Name == "Minero")
             {
                 if (points >= selected.Price)
                 {
@@ -948,26 +1268,98 @@ namespace RocketClickerGame
                     switch (numberDisplay)
                     {
                         case "SpokenNotation":
-                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                    break;
+                            }
                             break;
                         case "ScientificNotation":
-                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                    break;
+                            }
                             break;
+
                         case "EngineeringNotation":
-                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                    break;
+                            }
                             break;
                     }
-                    MessageBox.Show($"{selected.Name} hired!");
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show($"{selected.Name} hired!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show($"{selected.Name} embauché(e) !");
+                            break;
+                        case "es":
+                            MessageBox.Show($"¡{selected.Name} contratado!");
+
+                            break;
+                    }
                     settingsForm.CompleteMinerAchievement();
 
                     StartPassivePointGeneration();
                     //increase price
                     selected.Price = (int)(selected.Price * 1.25);
-                    minerCostButton.Text = $"{selected.Price} points";
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            minerCostButton.Text = $"{selected.Price} points";
+                            break;
+                        case "fr-CA":
+                            minerCostButton.Text = $"{selected.Price} points";
+                            break;
+                        case "es":
+                            minerCostButton.Text = $"{selected.Price} puntos";
+
+                            break;
+                    }
                 }
+
                 else
                 {
-                    MessageBox.Show("Not enough points!");
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("Not enough points!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Points insuffisant!");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡No tienes suficientes puntos!");
+
+                            break;
+                    }
                 }
             }
         }
@@ -977,21 +1369,42 @@ namespace RocketClickerGame
         //add ojects to list
         private void addFactoryUpgradeToList()
         {
+            currentLanguage = ConfigurationManager.AppSettings["language"];
+
+            string spaceName = "";
+            string moonNightName = "";
+
+            switch (currentLanguage)
+            {
+                case "fr-CA":
+                    spaceName = "Espace";
+                    moonNightName = "Nuit de Lune";
+                    break;
+                case "es":
+                    spaceName = "Espacio";
+                    moonNightName = "Noche Lunar";
+                    break;
+                default: // English
+                    spaceName = "Space";
+                    moonNightName = "Moon Night";
+                    break;
+            }
+
             factoryImprovements.Add(new FactoryImprovements
             {
-                Name = "Space",
+                Name = spaceName,
                 Price = 2000,
                 Image = Properties.Resources.Space_Background_1
             });
 
             factoryImprovements.Add(new FactoryImprovements
             {
-                Name = "MoonNight",
+                Name = moonNightName,
                 Price = 1000,
                 Image = Properties.Resources.moonBackground
             });
         }
-        
+
         private void spaceCostButton_Click(object sender, EventArgs e)
         {
             var selected = factoryImprovements[currentFactoryIndex];
@@ -1003,17 +1416,63 @@ namespace RocketClickerGame
                 switch (numberDisplay)
                 {
                     case "SpokenNotation":
-                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                break;
+                        }
                         break;
                     case "ScientificNotation":
-                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                break;
+                        }
                         break;
+
                     case "EngineeringNotation":
-                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                break;
+                        }
                         break;
                 }
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Welcome to Space!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Bienvenue dans l’espace !");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡Bienvenido al espacio!");
 
-                MessageBox.Show("Welcome to Space!");
+                        break;
+                }
                 settingsForm.CompleteSpaceAchievement();
 
                 this.BackgroundImage = selected.Image;
@@ -1025,7 +1484,19 @@ namespace RocketClickerGame
             }
             else
             {
-                MessageBox.Show("Not enough points!");
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Not enough points!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Points insuffisant!");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡No tienes suficientes puntos!");
+
+                        break;
+                }
             }
         
     }
@@ -1042,17 +1513,63 @@ namespace RocketClickerGame
                     switch (numberDisplay)
                     {
                         case "SpokenNotation":
-                            pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                    break;
+                            }
                             break;
                         case "ScientificNotation":
-                            pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                    break;
+                            }
                             break;
+
                         case "EngineeringNotation":
-                            pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                            switch (currentLanguage)
+                            {
+                                case "en":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "fr-CA":
+                                    pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                    break;
+                                case "es":
+                                    pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                    break;
+                            }
                             break;
                     }
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("Moon Night!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Nuit de Lune !");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡Noche de Luna!");
 
-                    MessageBox.Show("Moon Night!");
+                            break;
+                    }
                     settingsForm.CompleteNightSkyAchievement();
 
                     this.BackgroundImage = selected.Image;
@@ -1064,7 +1581,19 @@ namespace RocketClickerGame
                 }
                 else
                 {
-                    MessageBox.Show("Not enough points!");
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("Not enough points!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Points insuffisant!");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡No tienes suficientes puntos!");
+
+                            break;
+                    }
                 }
 
             }
@@ -1075,6 +1604,8 @@ namespace RocketClickerGame
             // Opens it as a window blocks the main form
             settingsForm.ShowDialog(); 
         }
+
+   
 
         private void languageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1103,19 +1634,39 @@ namespace RocketClickerGame
         //add ojects to list
         private void addPowerToList()
         {
+            currentLanguage = ConfigurationManager.AppSettings["language"];
+
+            string fuelName = "";
+            string speedName = "";
+
+            switch (currentLanguage)
+            {
+                case "fr-CA":
+                    fuelName = "Carburant";
+                    speedName = "Vitesse";
+                    break;
+                case "es":
+                    fuelName = "Combustible";
+                    speedName = "Velocidad";
+                    break;
+                default: // English
+                    fuelName = "Fuel";
+                    speedName = "Speed";
+                    break;
+            }
+
             powerUps.Add(new PowerUps
             {
-                Name = "Fuel",
+                Name = fuelName,
                 Price = 50,
-                
             });
 
             powerUps.Add(new PowerUps
             {
-                Name = "Speed",
+                Name = speedName,
                 Price = 100,
-                
             });
+        
         }
 
         //Power Ups
@@ -1133,17 +1684,63 @@ namespace RocketClickerGame
                 switch (numberDisplay)
                 {
                     case "SpokenNotation":
-                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                break;
+                        }
                         break;
                     case "ScientificNotation":
-                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                break;
+                        }
                         break;
+
                     case "EngineeringNotation":
-                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                break;
+                        }
                         break;
                 }
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show($"Purchased: {selected.Name}!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show($"Acheté : {selected.Name} !");
+                        break;
+                    case "es":
+                        MessageBox.Show($"Comprado: {selected.Name}!");
 
-                MessageBox.Show($"Purchased: {selected.Name}!");
+                        break;
+                }
 
                 // Increase pointsPerClick depending on which upgrade
                 if (currentEnhancementIndex == 0)
@@ -1155,7 +1752,19 @@ namespace RocketClickerGame
 
             else
             {
-                MessageBox.Show("Not enough points!");
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show("Not enough points!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show("Points insuffisant!");
+                        break;
+                    case "es":
+                        MessageBox.Show("¡No tienes suficientes puntos!");
+
+                        break;
+                }
             }
         }
 
@@ -1173,31 +1782,88 @@ namespace RocketClickerGame
                 switch (numberDisplay)
                 {
                     case "SpokenNotation":
-                        pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToSpokenNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToSpokenNotation(points);
+                                break;
+                        }
                         break;
                     case "ScientificNotation":
-                        pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToScientificNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToScientificNotation(points);
+                                break;
+                        }
                         break;
+
                     case "EngineeringNotation":
-                        pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                        switch (currentLanguage)
+                        {
+                            case "en":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "fr-CA":
+                                pointsLabel.Text = "Points: " + convert.ToEngineeringNotation(points);
+                                break;
+                            case "es":
+                                pointsLabel.Text = "Puntos: " + convert.ToEngineeringNotation(points);
+
+                                break;
+                        }
                         break;
                 }
-
-                MessageBox.Show($"Purchased: {selected.Name}!");
-
+                switch (currentLanguage)
+                {
+                    case "en":
+                        MessageBox.Show($"Purchased: {selected.Name}!");
+                        break;
+                    case "fr-CA":
+                        MessageBox.Show($"Acheté : {selected.Name} !");
+                        break;
+                    case "es":
+                        MessageBox.Show($"Comprado: {selected.Name}!");
+                        break;
+                }
                 // Increase pointsPerClick depending on which upgrade
                 if (currentEnhancementIndex == 0)
-                {
-                    pointsPerClick += 200; // First upgrade
+                        {
+                            pointsPerClick += 200; // First upgrade
+                        }
                 }
-            }
 
 
             else
-            {
-                MessageBox.Show("Not enough points!");
+                {
+                    switch (currentLanguage)
+                    {
+                        case "en":
+                            MessageBox.Show("Not enough points!");
+                            break;
+                        case "fr-CA":
+                            MessageBox.Show("Points insuffisant!");
+                            break;
+                        case "es":
+                            MessageBox.Show("¡No tienes suficientes puntos!");
+
+                            break;
+                    }
+                }
             }
-        }
+        
 
         public void musicOn()
         {
