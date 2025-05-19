@@ -198,8 +198,8 @@
   <data name="settingsLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cooper Black, 26.25pt</value>
   </data>
-  <data name="&gt;&gt;MinerAchievementLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="RiderAchievementLabel.Text" xml:space="preserve">
+    <value>Buy a rider</value>
   </data>
   <data name="NewRocketAchievementLabel.Text" xml:space="preserve">
     <value>Buy a new rocket</value>
@@ -279,11 +279,11 @@
   <data name="NumberSettingComboBox.Items1" xml:space="preserve">
     <value>Scientific Notation</value>
   </data>
+  <data name="&gt;&gt;AchievementLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="MeteorAchievementLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>54, 6, 6, 6</value>
-  </data>
-  <data name="&gt;&gt;MeteorAchievementLabel.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="MusicLabel.Text" xml:space="preserve">
     <value>Music</value>
@@ -402,6 +402,9 @@
   <data name="&gt;&gt;RiderAchievementLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="NumberSettingComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 21</value>
+  </data>
   <data name="RiderAchievementLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 27</value>
   </data>
@@ -416,9 +419,6 @@
   </data>
   <data name="MusicOffButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>124, 204</value>
-  </data>
-  <data name="RiderAchievementLabel.Text" xml:space="preserve">
-    <value>Buy a rider</value>
   </data>
   <data name="SpaceAchievementLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -471,8 +471,8 @@
   <data name="ClickAchievementLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;AchievementLabel.Name" xml:space="preserve">
-    <value>AchievementLabel</value>
+  <data name="&gt;&gt;MinerAchievementLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;NumberSettingComboBox.Name" xml:space="preserve">
     <value>NumberSettingComboBox</value>
@@ -489,8 +489,8 @@
   <data name="&gt;&gt;SpaceAchievementLabel.Name" xml:space="preserve">
     <value>SpaceAchievementLabel</value>
   </data>
-  <data name="&gt;&gt;AchievementLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;AchievementLabel.Name" xml:space="preserve">
+    <value>AchievementLabel</value>
   </data>
   <data name="NightSkyAchievementLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 388</value>
@@ -534,8 +534,8 @@
   <data name="EngineerAchievementLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="NumberSettingComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 21</value>
+  <data name="&gt;&gt;MeteorAchievementLabel.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;ClickAchievementLabel3.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -673,6 +673,6 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>es</value>
+    <value>fr-CA</value>
   </metadata>
 </root>

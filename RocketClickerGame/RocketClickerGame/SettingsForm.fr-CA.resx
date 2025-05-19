@@ -180,7 +180,7 @@
     <value>239, 27</value>
   </data>
   <data name="RiderAchievementLabel.Text" xml:space="preserve">
-    <value>Acheter un cycliste</value>
+    <value>Acheter un cavalier</value>
   </data>
   <data name="ClickAchievementLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -250,5 +250,8 @@
   </data>
   <data name="ClickAchievementLabel3.Text" xml:space="preserve">
     <value>Clickez 1000 fois</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Paramètres</value>
   </data>
 </root>

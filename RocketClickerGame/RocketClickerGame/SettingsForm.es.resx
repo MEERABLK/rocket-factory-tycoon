@@ -251,4 +251,7 @@
   <data name="ClickAchievementLabel3.Text" xml:space="preserve">
     <value>Haz clic 1000 veces</value>
   </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
 </root>
