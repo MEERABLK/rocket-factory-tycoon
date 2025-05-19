@@ -1035,6 +1035,7 @@ namespace RocketClickerGame
 
                     }
 
+                    settingsForm.CompleteRiderAchievement();
                     StartPassivePointGeneration();
 
                     // Increase price and update button
@@ -1230,12 +1231,10 @@ namespace RocketClickerGame
                             engineerCostButton.Text = $"{selected.Price} puntos";
 
                             break;
-
                     }
                 }
                 else
                 {
-
                     switch (currentLanguage)
                     {
                         case "en":
@@ -1248,7 +1247,6 @@ namespace RocketClickerGame
                             MessageBox.Show("¡No tienes suficientes puntos!");
 
                             break;
-
                     }
                 }
             }
