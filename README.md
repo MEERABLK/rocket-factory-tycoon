@@ -47,9 +47,6 @@ The major focus of the project includes:
 
 - `RocketFactoryTycoon.sln` – Solution file
 - `RocketFactoryTycoon/` – Project folder with all source code
-- `Docs/UserGuide.pdf` – User manual
-- `Docs/ProjectProposal.docx` – Project proposal
-- `Docs/Slides.pptx` – Presentation slides
 
 ## Screenshot
 
